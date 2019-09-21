@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewData["Title"] = "Main";
+}
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKRHQVvAH-qN5L15bFgwciXKKXgPUraag&callback=initMap" async defer></script>
+<style>
+    .container, .body-content {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    #main-overlay {
+        position: absolute;
+        top: 15%;
+        left: 0px;
+        z-index: 99;
+        background-color: #222;
+        height: 65vh;
+        width: 30vh;
+        color: white;
+        padding: 15px;
+    }
+
+    .row {
+        margin: 0px;
+    }
+</style>
+
+<div id="map"></div>
+<div id="main-overlay">
+    <div id="" class="row">
+        <div>
+            <h2>Welcome!</h2>
+            <hr />
+            <p>
+                Park N Go is a startup that provides user with cheap parking around the vicinity they are visiting.
+                We provide tools, information and connection with people that will allow you to plan your trip
+                according and most importantly as cheap as possible for parking.
+            </p>
+            <br />
+            <div class="form-group">
+                <input type="button" class="btn btn-primary" value="Get Started" id="main-start-btn" />
+            </div>
+            <img src="~/images/ad-mockup.jpg" />
+        </div>
+    </div>
+</div>
+<script>
+    var defaultLat = 43.2574316;
+    var defaultLong = -79.89;
+    var map;
+    function initMap() {
+
+        var mySettings = {
+            center: { lat: defaultLat, lng: defaultLong },
+            zoom: 12
+        };
+
+        map = new google.maps.Map(document.getElementById('map'), mySettings);
+
+    };
+    $(document).ready(function () {
+        initMap;
+    });
+</script>

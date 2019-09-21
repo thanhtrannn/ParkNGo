@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewData["Title"] = "Schedule";
+}
+
+<div id="registration-schedule" class="form-group">
+    <h2>Schedule</h2>
+    <hr />
+    <br />
+    <input type="button" class="btn btn-primary" id="new-sched-btn" value="Add New">
+    <br />
+    <div id="schedule-section">
+    </div>
+    <br />
+    <input type="button" class="btn btn-primary" id="add-sched-btn" value="Add Schedule">
+    <input type="button" class="btn btn-danger" id="skip-sched-btn" value="Skip">
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#new-sched-btn").click(function () {
+            $.ajax({
+                type: 'GET',
+                dataType: 'json',
+                url: 'GetViewComponent',
+                data: { 'view': 'DateAndTimes' },
+                complete: function (data, textStatus, jqXHR) {
+                    $("#schedule-section").append(data.responseText);
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log("fail");
+                }
+            })
+        });
+        $("#add-sched-btn").click(function () {
+            $("#registration-schedule").hide();
+            $.ajax({
+                type: 'GET',
+                dataType: 'json',
+                url: 'GetViewComponent',
+                data: { 'view': 'Complete' },
+                complete: function (data, textStatus, jqXHR) {
+                    $("#registration-section").append(data.responseText);
+                    $(".progress-bar-striped").css("width", "100%");
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log("fail");
+                }
+            })
+        });
+        $("#skip-sched-btn").click(function () {
+            $("#registration-schedule").hide();
+            $.ajax({
+                type: 'GET',
+                dataType: 'json',
+                url: 'GetViewComponent',
+                data: { 'view': 'Complete' },
+                complete: function (data, textStatus, jqXHR) {
+                    $("#registration-section").append(data.responseText);
+                    $(".progress-bar-striped").css("width", "100%");
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log("fail");
+                }
+            })
+        });
+    });
+
+</script>

@@ -1,0 +1,69 @@
+﻿@model ParkNGo.Models.User
+
+@{
+    ViewData["Title"] = "Default";
+}
+
+<div id="registration-one" class="form-group">
+    <h2>Registration</h2>
+    <hr />
+    <label class="control-label">Username</label>
+    <input class="form-control" type="text" id="Username" />
+    <label class="control-label">Password</label>
+    <input class="form-control" type="password" />
+    <label class="control-label">Retype Password</label>
+    <input class="form-control" type="password" />
+    <label class="control-label">E-mail</label>
+    <input class="form-control" type="text" id="Email" />
+    <label class="control-label">Address</label>
+    <input class="form-control" type="text" />
+    <label class="control-label">City</label>
+    <input class="form-control" type="text" />
+    <label class="control-label">Province</label>
+    <input class="form-control" type="text" />
+    <label class="control-label">Postal Code</label>
+    <input class="form-control" type="text" />
+    <label class="control-label">Phone Number</label>
+    <input class="form-control" type="text" />
+    <br />
+    <input type="button" class="btn btn-primary" id="AddPayment" value="Add Payment">
+    <input type="button" class="btn btn-danger" id="OneSkip" value="Skip" />
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#AddPayment").click(function () {
+            $("#registration-one").hide();
+            $.ajax({
+                type: 'GET',
+                dataType: 'json',
+                url: 'GetViewComponent',
+                data: { 'view': 'Payment' },
+                complete: function (data, textStatus, jqXHR) {
+                    $("#registration-section").append(data.responseText);
+                    $(".progress-bar-striped").css("width", "50%");
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log("fail");
+                }
+            })
+        });
+        $("#OneSkip").click(function () {
+            $("#registration-one").hide();
+            $.ajax({
+                type: 'GET',
+                dataType: 'json',
+                url: 'GetViewComponent',
+                data: { 'view': 'Property' },
+                complete: function (data, textStatus, jqXHR) {
+                    $("#registration-section").append(data.responseText);
+                    $(".progress-bar-striped").css("width", "75%");
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log("fail");
+                }
+            })
+        });
+    });
+
+</script>

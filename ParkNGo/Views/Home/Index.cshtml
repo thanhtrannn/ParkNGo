@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>Login</h2>
+<hr />
+<div class="container-fluid row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <form asp-action="Index">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label class="control-label">Username</label>
+                <input class="form-control" type="text" />
+                <label class="control-label">Password</label>
+                <input class="form-control" type="text" />
+                <div class="row">
+                    <div class="col-md-6 col-xs-6">
+                        <a asp-area="" asp-controller="Home" asp-action="Register">Register</a>
+                    </div>
+                    <div class="col-md-6 col-xs-6 forgot-password-section">
+                        <a asp-area="" asp-controller="Home" asp-action="Forgot">Forgot Password</a>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <input class="btn btn-primary" type="submit" value="Login" />
+            </div>
+        </form>
+    </div>
+    <div class="col-md-4"></div>
+</div>

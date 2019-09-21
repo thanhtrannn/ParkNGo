@@ -1,0 +1,61 @@
+﻿@model ParkNGo.Models.User
+
+@{
+    ViewData["Title"] = "Payment";
+}
+
+    <div id="registration-two" class="form-group">
+        <h2>Payment</h2>
+        <hr />
+        <label class="control-label">Credit Card Type</label>
+        <input class="form-control" type="text" />
+        <label class="control-label">Credit Card Number</label>
+        <input class="form-control" type="text" />
+        <label class="control-label">Name on Credit Card</label>
+        <input class="form-control" type="text" />
+        <label class="control-label">Expiration</label>
+        <input class="form-control" type="text" />
+        <label class="control-label">CCV</label>
+        <input class="form-control" type="password" />
+        <br />
+        <input type="button" class="btn btn-primary" id="Save" value="Save">
+        <input type="button" class="btn btn-danger" id="TwoSkip" value="Skip" />
+    </div>
+
+<script>
+    $(document).ready(function () {
+        $("#Save").click(function () {
+            $("#registration-two").hide();
+            $.ajax({
+                type: 'GET',
+                dataType: 'json',
+                url: 'GetViewComponent',
+                data: { 'view': 'Property' },
+                complete: function (data, textStatus, jqXHR) {
+                    $("#registration-section").append(data.responseText);
+                    $(".progress-bar-striped").css("width", "75%");
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log("fail");
+                }
+            })
+        });
+        $("#TwoSkip").click(function () {
+            $("#registration-two").hide();
+            $.ajax({
+                type: 'GET',
+                dataType: 'json',
+                url: 'GetViewComponent',
+                data: { 'view': 'Property' },
+                complete: function (data, textStatus, jqXHR) {
+                    $("#registration-section").append(data.responseText);
+                    $(".progress-bar-striped").css("width", "75%");
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log("fail");
+                }
+            })
+        });
+    });
+
+</script>
