@@ -1,0 +1,472 @@
+2019-11-11 14:42:30 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 14:42:32 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-11 14:42:33 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-11 14:47:09 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 14:47:15 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 14:57:12 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 14:57:26 [WRN] [null(::1)]: Invalid route access <>
+2019-11-11 14:57:26 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 14:59:37 [WRN] [null(::1)]: Invalid route access <>
+2019-11-11 14:59:37 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 15:00:03 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 15:00:56 [WRN] [null(::1)]: Invalid route access <>
+2019-11-11 15:00:56 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 16:09:16 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 16:09:20 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-11 16:09:21 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-11 16:09:21 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 16:23:26 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 16:23:30 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-11 16:23:30 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-11 16:23:30 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 16:23:35 [INF] [null(::1)]: Directing to Account page for ThanhTran27 <>
+2019-11-11 16:23:38 [INF] [null(::1)]: Directing to Inbox page... <>
+2019-11-11 16:51:06 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 16:51:11 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-11 16:51:11 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-11 16:51:11 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 16:51:13 [INF] [null(::1)]: Directing to Account page for ThanhTran27 <>
+2019-11-11 17:01:20 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 17:01:24 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-11 17:01:24 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-11 17:01:25 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 17:01:35 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 17:42:21 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 17:42:24 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-11 17:42:24 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-11 17:42:24 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 18:06:37 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 18:06:40 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-11 18:06:41 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-11 18:06:41 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 18:06:50 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 18:06:54 [INF] [null(::1)]: Checking crentials for: Testing2 <>
+2019-11-11 18:06:54 [INF] [null(::1)]: Credentials passed for: Testing2 <>
+2019-11-11 18:06:54 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 18:07:00 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 18:07:02 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 18:07:04 [INF] [null(::1)]: Adding transaction to DB <>
+2019-11-11 18:09:02 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 18:09:06 [INF] [null(::1)]: Checking crentials for: Testing2 <>
+2019-11-11 18:09:06 [INF] [null(::1)]: Credentials passed for: Testing2 <>
+2019-11-11 18:09:06 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 18:09:11 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 18:09:13 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 18:09:14 [INF] [null(::1)]: Adding transaction to DB <>
+2019-11-11 18:09:14 [INF] [null(::1)]: Successful adding to transaction DB <>
+2019-11-11 18:09:14 [INF] [null(::1)]: Direct to View Component: Additional, with view: Success <>
+2019-11-11 18:09:39 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 18:09:55 [INF] [null(::1)]: Checking crentials for: Testing2 <>
+2019-11-11 18:09:56 [INF] [null(::1)]: Credentials passed for: Testing2 <>
+2019-11-11 18:09:56 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 18:10:05 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 18:10:07 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 18:10:13 [INF] [null(::1)]: Adding transaction to DB <>
+2019-11-11 18:21:54 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 18:21:57 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-11 18:21:57 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-11 18:21:57 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 18:22:05 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 18:22:11 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 18:23:45 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 18:34:18 [INF] [null(::1)]: Adding transaction to DB <>
+2019-11-11 18:34:18 [INF] [null(::1)]: Successful adding to transaction DB <>
+2019-11-11 18:34:18 [INF] [null(::1)]: Direct to View Component: Additional, with view: Success <>
+2019-11-11 18:34:28 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 18:35:19 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-11 18:35:20 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-11 18:35:20 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 18:35:31 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 18:35:34 [INF] [null(::1)]: Checking crentials for: Testing2 <>
+2019-11-11 18:35:34 [INF] [null(::1)]: Credentials passed for: Testing2 <>
+2019-11-11 18:35:34 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 18:35:41 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 18:35:43 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 18:35:52 [INF] [null(::1)]: Adding transaction to DB <>
+2019-11-11 18:37:23 [WRN] [null(::1)]: Invalid route access <>
+2019-11-11 18:37:23 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 18:37:24 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 18:37:41 [INF] [null(::1)]: Checking crentials for: Testing2 <>
+2019-11-11 18:37:42 [INF] [null(::1)]: Credentials passed for: Testing2 <>
+2019-11-11 18:37:42 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 18:37:48 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 18:37:53 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 18:37:59 [INF] [null(::1)]: Adding transaction to DB <>
+2019-11-11 18:52:29 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 18:53:32 [INF] [null(::1)]: Checking crentials for: Testing2 <>
+2019-11-11 18:53:32 [INF] [null(::1)]: Credentials passed for: Testing2 <>
+2019-11-11 18:53:32 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 18:54:35 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 18:54:36 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 18:54:38 [INF] [null(::1)]: Adding transaction to DB <>
+2019-11-11 19:10:15 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 19:10:21 [INF] [null(::1)]: Checking crentials for: Testing2 <>
+2019-11-11 19:10:22 [INF] [null(::1)]: Credentials passed for: Testing2 <>
+2019-11-11 19:10:22 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 19:10:28 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 19:10:30 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 19:10:32 [INF] [null(::1)]: Adding transaction to DB <>
+2019-11-11 19:37:05 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 19:37:15 [INF] [null(::1)]: Checking crentials for: Testing2 <>
+2019-11-11 19:37:16 [INF] [null(::1)]: Credentials passed for: Testing2 <>
+2019-11-11 19:37:16 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 19:37:21 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 19:37:24 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 19:37:25 [INF] [null(::1)]: Adding transaction to DB <>
+2019-11-11 19:38:38 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 19:38:54 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 19:38:59 [INF] [null(::1)]: Checking crentials for: Testing2 <>
+2019-11-11 19:39:00 [INF] [null(::1)]: Credentials passed for: Testing2 <>
+2019-11-11 19:39:00 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 19:39:13 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 19:39:15 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 19:39:16 [INF] [null(::1)]: Adding transaction to DB <>
+2019-11-11 19:44:57 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 19:45:01 [INF] [null(::1)]: Checking crentials for: Testing2 <>
+2019-11-11 19:45:02 [INF] [null(::1)]: Credentials passed for: Testing2 <>
+2019-11-11 19:45:02 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 19:45:07 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 19:45:09 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 19:45:10 [INF] [null(::1)]: Adding transaction to DB <>
+2019-11-11 19:47:57 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 19:48:02 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-11 19:48:02 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-11 19:48:02 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 19:48:07 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 19:48:09 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 19:48:11 [INF] [null(::1)]: Adding transaction to DB <>
+2019-11-11 19:49:50 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 19:49:57 [INF] [null(::1)]: Checking crentials for: Testing2 <>
+2019-11-11 19:49:58 [INF] [null(::1)]: Credentials passed for: Testing2 <>
+2019-11-11 19:49:58 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 19:50:03 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 19:50:04 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 19:50:05 [INF] [null(::1)]: Adding transaction to DB <>
+2019-11-11 19:51:16 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 19:51:19 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-11 19:51:19 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-11 19:51:19 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 19:51:36 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 19:51:38 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 19:51:41 [INF] [null(::1)]: Adding transaction to DB <>
+2019-11-11 19:55:14 [INF] [null(::1)]: Successful adding to transaction DB <>
+2019-11-11 19:55:14 [INF] [null(::1)]: Direct to View Component: Additional, with view: Success <>
+2019-11-11 19:55:27 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 19:55:29 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 19:55:32 [INF] [null(::1)]: Adding transaction to DB <>
+2019-11-11 20:02:33 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 20:02:53 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-11 20:02:54 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-11 20:02:54 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 20:03:01 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 20:03:02 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 20:03:05 [INF] [null(::1)]: Adding transaction to DB <>
+2019-11-11 20:30:27 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 20:30:35 [INF] [null(::1)]: Checking crentials for: Testing2 <>
+2019-11-11 20:30:35 [WRN] [null(::1)]: Credentials did not match DB <>
+2019-11-11 20:30:37 [INF] [null(::1)]: Checking crentials for: Testing2 <>
+2019-11-11 20:30:37 [INF] [null(::1)]: Credentials passed for: Testing2 <>
+2019-11-11 20:30:37 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 20:30:42 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 20:30:49 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 20:32:34 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 20:33:50 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 20:33:54 [INF] [null(::1)]: Adding transaction to DB <>
+2019-11-11 20:33:54 [INF] [null(::1)]: Successful adding to transaction DB <>
+2019-11-11 20:33:54 [INF] [null(::1)]: Direct to View Component: Additional, with view: Success <>
+2019-11-11 20:33:57 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 20:33:59 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 20:34:01 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 20:34:02 [INF] [null(::1)]: Adding transaction to DB <>
+2019-11-11 20:34:02 [INF] [null(::1)]: Successful adding to transaction DB <>
+2019-11-11 20:34:02 [INF] [null(::1)]: Direct to View Component: Additional, with view: Success <>
+2019-11-11 20:35:50 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 20:35:55 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-11 20:35:55 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-11 20:35:56 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 20:36:01 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 20:36:05 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 20:36:35 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 20:36:41 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 20:36:43 [INF] [null(::1)]: Adding transaction to DB <>
+2019-11-11 20:36:43 [INF] [null(::1)]: Successful adding to transaction DB <>
+2019-11-11 20:36:43 [INF] [null(::1)]: Direct to View Component: Additional, with view: Success <>
+2019-11-11 20:37:47 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 20:37:52 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-11 20:37:53 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-11 20:37:53 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 20:37:58 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 20:38:00 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 20:38:02 [INF] [null(::1)]: Adding transaction to DB <>
+2019-11-11 20:38:03 [ERR] [null(::1)]: Error adding to transaction DB <ParkNGo.Controllers.UserController>
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'time_slot', table 'ParkNGo.dbo.Transaction'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at ParkNGo.Controllers.UserController.ContinuePayment(Int32 propertyId, String details, String propertyOwner, Int32 paymentId, Single amount) in H:\Capstone\ParkNGo\ParkNGo\Controllers\UserController.cs:line 388
+2019-11-11 20:38:05 [INF] [null(::1)]: Direct to View Component: Additional, with view: Error <>
+2019-11-11 20:38:09 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 20:38:11 [INF] [null(::1)]: Adding transaction to DB <>
+2019-11-11 20:38:11 [ERR] [null(::1)]: Error adding to transaction DB <ParkNGo.Controllers.UserController>
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'time_slot', table 'ParkNGo.dbo.Transaction'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at ParkNGo.Controllers.UserController.ContinuePayment(Int32 propertyId, String details, String propertyOwner, Int32 paymentId, Single amount) in H:\Capstone\ParkNGo\ParkNGo\Controllers\UserController.cs:line 388
+2019-11-11 20:38:11 [INF] [null(::1)]: Direct to View Component: Additional, with view: Error <>
+2019-11-11 20:39:12 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 20:39:14 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 20:39:16 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 20:39:18 [INF] [null(::1)]: Adding transaction to DB <>
+2019-11-11 20:39:18 [INF] [null(::1)]: Successful adding to transaction DB <>
+2019-11-11 20:39:18 [INF] [null(::1)]: Direct to View Component: Additional, with view: Success <>
+2019-11-11 20:39:36 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 20:39:38 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 20:39:46 [INF] [null(::1)]: Adding transaction to DB <>
+2019-11-11 20:39:46 [INF] [null(::1)]: Successful adding to transaction DB <>
+2019-11-11 20:39:46 [INF] [null(::1)]: Direct to View Component: Additional, with view: Success <>
+2019-11-11 20:39:53 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 20:39:55 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 20:39:56 [INF] [null(::1)]: Adding transaction to DB <>
+2019-11-11 20:39:56 [INF] [null(::1)]: Successful adding to transaction DB <>
+2019-11-11 20:39:56 [INF] [null(::1)]: Direct to View Component: Additional, with view: Success <>
+2019-11-11 20:45:42 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 20:45:50 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-11 20:45:50 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-11 20:45:50 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 20:45:55 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 20:45:57 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 20:46:00 [INF] [null(::1)]: Adding transaction to DB <>
+2019-11-11 20:46:00 [ERR] [null(::1)]: Error with transaction <>
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ParkNGo.Controllers.UserController.AdjustmentOfSchedule(Transaction transaction) in H:\Capstone\ParkNGo\ParkNGo\Controllers\UserController.cs:line 415
+2019-11-11 20:46:00 [INF] [null(::1)]: Successful adding to transaction DB <>
+2019-11-11 20:46:00 [INF] [null(::1)]: Direct to View Component: Additional, with view: Success <>
+2019-11-11 20:46:28 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 20:46:32 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 20:46:34 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 20:46:36 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 20:46:38 [INF] [null(::1)]: Adding transaction to DB <>
+2019-11-11 20:47:05 [ERR] [null(::1)]: Error with transaction <>
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ParkNGo.Controllers.UserController.AdjustmentOfSchedule(Transaction transaction) in H:\Capstone\ParkNGo\ParkNGo\Controllers\UserController.cs:line 415
+2019-11-11 20:47:05 [INF] [null(::1)]: Successful adding to transaction DB <>
+2019-11-11 20:47:05 [INF] [null(::1)]: Direct to View Component: Additional, with view: Success <>
+2019-11-11 20:47:08 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 20:47:11 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 20:47:13 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 20:47:15 [INF] [null(::1)]: Adding transaction to DB <>
+2019-11-11 20:48:10 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 20:48:16 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-11 20:48:16 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-11 20:48:16 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 20:48:33 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 20:48:34 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 20:48:36 [INF] [null(::1)]: Adding transaction to DB <>
+2019-11-11 20:49:38 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 20:50:05 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-11 20:50:06 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-11 20:50:06 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 20:50:14 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 20:50:16 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 20:50:18 [INF] [null(::1)]: Adding transaction to DB <>
+2019-11-11 20:50:37 [ERR] [null(::1)]: Error with transaction <>
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ParkNGo.Controllers.UserController.AdjustmentOfSchedule(Transaction transaction)
+2019-11-11 20:50:37 [INF] [null(::1)]: Successful adding to transaction DB <>
+2019-11-11 20:50:38 [INF] [null(::1)]: Direct to View Component: Additional, with view: Success <>
+2019-11-11 20:50:51 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 20:50:57 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-11 20:50:57 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-11 20:50:57 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 20:51:06 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 20:51:09 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 20:51:11 [INF] [null(::1)]: Adding transaction to DB <>
+2019-11-11 20:57:29 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 20:57:46 [INF] [null(::1)]: Checking crentials for: Testing2 <>
+2019-11-11 20:57:46 [INF] [null(::1)]: Credentials passed for: Testing2 <>
+2019-11-11 20:57:46 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 20:57:50 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 20:57:51 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 20:57:53 [INF] [null(::1)]: Adding transaction to DB <>
+2019-11-11 20:57:53 [INF] [null(::1)]: Successful adding to transaction DB <>
+2019-11-11 20:57:53 [ERR] [null(::1)]: Error with transaction <>
+System.ObjectDisposedException: Cannot access a disposed object. A common cause of this error is disposing a context that was resolved from dependency injection and then later trying to use the same context instance elsewhere in your application. This may occur if you are calling Dispose() on the context, or wrapping the context in a using statement. If you are using dependency injection, you should let the dependency injection container take care of disposing context instances.
+Object name: 'ParkNGoContext'.
+   at Microsoft.EntityFrameworkCore.DbContext.CheckDisposed()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at ParkNGo.Controllers.UserController.AdjustmentOfSchedule(Transaction transaction) in H:\Capstone\ParkNGo\ParkNGo\Controllers\UserController.cs:line 429
+2019-11-11 20:57:53 [INF] [null(::1)]: Direct to View Component: Additional, with view: Success <>
+2019-11-11 20:58:11 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 20:58:51 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 20:59:02 [INF] [null(::1)]: Checking crentials for: Testing2 <>
+2019-11-11 20:59:03 [INF] [null(::1)]: Credentials passed for: Testing2 <>
+2019-11-11 20:59:03 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 20:59:05 [INF] [null(::1)]: Directing to Account page for Testing2 <>
+2019-11-11 20:59:06 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 20:59:11 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 20:59:18 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 21:00:09 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 21:00:11 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 21:00:13 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 21:00:14 [INF] [null(::1)]: Adding transaction to DB <>
+2019-11-11 21:00:14 [INF] [null(::1)]: Successful adding to transaction DB <>
+2019-11-11 21:00:14 [ERR] [null(::1)]: Error with transaction <>
+System.ObjectDisposedException: Cannot access a disposed object. A common cause of this error is disposing a context that was resolved from dependency injection and then later trying to use the same context instance elsewhere in your application. This may occur if you are calling Dispose() on the context, or wrapping the context in a using statement. If you are using dependency injection, you should let the dependency injection container take care of disposing context instances.
+Object name: 'ParkNGoContext'.
+   at Microsoft.EntityFrameworkCore.DbContext.CheckDisposed()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at ParkNGo.Controllers.UserController.AdjustmentOfSchedule(Transaction transaction) in H:\Capstone\ParkNGo\ParkNGo\Controllers\UserController.cs:line 429
+2019-11-11 21:00:14 [INF] [null(::1)]: Direct to View Component: Additional, with view: Success <>
+2019-11-11 21:00:16 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 21:02:51 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 21:04:08 [INF] [null(::1)]: Checking crentials for: Testing2 <>
+2019-11-11 21:04:08 [INF] [null(::1)]: Credentials passed for: Testing2 <>
+2019-11-11 21:04:08 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 21:04:13 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 21:04:15 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 21:04:16 [INF] [null(::1)]: Adding transaction to DB <>
+2019-11-11 21:04:20 [INF] [null(::1)]: Successful adding to transaction DB <>
+2019-11-11 21:04:21 [INF] [null(::1)]: Direct to View Component: Additional, with view: Success <>
+2019-11-11 21:05:46 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 21:05:52 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-11 21:05:53 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-11 21:05:53 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 21:05:57 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 21:05:59 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 21:06:01 [INF] [null(::1)]: Adding transaction to DB <>
+2019-11-11 21:06:06 [INF] [null(::1)]: Successful adding to transaction DB <>
+2019-11-11 21:06:07 [INF] [null(::1)]: Direct to View Component: Additional, with view: Success <>
+2019-11-11 21:06:44 [ERR] [null(::1)]: Error with transaction <>
+System.ObjectDisposedException: Cannot access a disposed object. A common cause of this error is disposing a context that was resolved from dependency injection and then later trying to use the same context instance elsewhere in your application. This may occur if you are calling Dispose() on the context, or wrapping the context in a using statement. If you are using dependency injection, you should let the dependency injection container take care of disposing context instances.
+Object name: 'ParkNGoContext'.
+   at Microsoft.EntityFrameworkCore.DbContext.CheckDisposed()
+   at Microsoft.EntityFrameworkCore.DbContext.Update[TEntity](TEntity entity)
+   at ParkNGo.Controllers.UserController.AdjustmentOfSchedule(Transaction transaction) in H:\Capstone\ParkNGo\ParkNGo\Controllers\UserController.cs:line 433
+2019-11-11 21:07:13 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 21:08:34 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-11 21:08:35 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-11 21:08:35 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 21:08:40 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 21:08:43 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 21:08:45 [INF] [null(::1)]: Adding transaction to DB <>
+2019-11-11 21:08:48 [INF] [null(::1)]: Successful adding to transaction DB <>
+2019-11-11 21:08:49 [INF] [null(::1)]: Direct to View Component: Additional, with view: Success <>
+2019-11-11 21:08:52 [INF] [null(::1)]: Property availability updated and booked <>
+2019-11-11 21:11:20 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 21:11:25 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-11 21:11:25 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-11 21:11:25 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 21:11:31 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 21:12:01 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 21:17:26 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 21:17:48 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 21:18:29 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 21:20:34 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 21:21:48 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 21:22:20 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 21:22:28 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 21:22:42 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 21:23:02 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 21:23:06 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 21:23:12 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 21:23:14 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 21:23:39 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 21:25:09 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 21:25:13 [INF] [null(::1)]: Directing to Account page for ThanhTran27 <>
+2019-11-11 21:25:14 [INF] [null(::1)]: Directing to Transaction page... <>
+2019-11-11 21:25:56 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 21:39:32 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 21:39:45 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-11 21:39:46 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-11 21:39:46 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 21:39:47 [INF] [null(::1)]: Directing to Account page for ThanhTran27 <>
+2019-11-11 21:39:49 [INF] [null(::1)]: Directing to Transaction page... <>
+2019-11-11 21:40:34 [INF] [null(::1)]: Directing to Transaction page... <>
+2019-11-11 21:40:39 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 21:40:40 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 21:40:44 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 21:41:09 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 21:41:11 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 21:41:20 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 21:43:08 [INF] [null(::1)]: Saving comment to DB... <>
+2019-11-11 21:58:13 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 21:58:17 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-11 21:58:18 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-11 21:58:18 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 21:58:32 [INF] [null(::1)]: Saving comment to DB... <>
+2019-11-11 22:06:51 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 22:09:27 [WRN] [null(::1)]: Invalid route access <>
+2019-11-11 22:09:27 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 22:09:30 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-11 22:09:30 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-11 22:09:30 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 22:09:42 [INF] [null(::1)]: Saving comment to DB... <>
+2019-11-11 22:18:08 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 22:34:26 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-11 22:34:26 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-11 22:34:27 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 22:34:39 [INF] [null(::1)]: Saving comment to DB... <>
+2019-11-11 22:35:40 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 22:38:41 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 22:38:41 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 22:38:46 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 22:38:52 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 22:38:55 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-11 22:38:55 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-11 22:38:55 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 22:38:59 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 22:39:02 [INF] [null(::1)]: Direct to View Component: Main, with view: GetPayment <>
+2019-11-11 22:44:51 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 22:44:55 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-11 22:44:56 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-11 22:44:56 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 22:45:17 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 22:45:28 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 22:45:38 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 22:46:01 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 22:46:18 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 22:46:34 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 22:46:47 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 22:47:06 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 22:48:21 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 22:49:11 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 22:50:29 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 22:51:25 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 23:51:13 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-11 23:51:15 [WRN] [null(::1)]: Invalid route access <>
+2019-11-11 23:51:15 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-11 23:51:18 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-11 23:51:18 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-11 23:51:18 [INF] [null(::1)]: Create property object for map <>
+2019-11-11 23:51:41 [INF] [null(::1)]: Directing to Account page for ThanhTran27 <>
+2019-11-11 23:51:42 [INF] [null(::1)]: Directing to Transaction page... <>
+2019-11-11 23:51:50 [INF] [null(::1)]: Directing to Transaction page... <>

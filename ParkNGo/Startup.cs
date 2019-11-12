@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ParkNGo.Middleware;
+using ParkNGo.Models;
+using ParkNGo.Tools;
+using Serilog;
 
 namespace ParkNGo
 {
@@ -16,6 +16,11 @@ namespace ParkNGo
     {
         public Startup(IConfiguration configuration)
         {
+            // Initial creation of Serilog, allow settings to be configured in appsettings.json
+            Log.Logger = new LoggerConfiguration()
+                .ReadFrom.Configuration(configuration)
+                .Enrich.FromLogContext()
+                .CreateLogger();
             Configuration = configuration;
         }
 
@@ -30,8 +35,17 @@ namespace ParkNGo
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-
-
+            services.AddSession(options =>
+            {
+                // Set a short timeout for easy testing.
+                // options.IdleTimeout = TimeSpan.FromSeconds(10);
+                options.Cookie.HttpOnly = true;
+                // Make the session cookie essential
+                options.Cookie.IsEssential = true;
+            });
+            var connection = Configuration.GetConnectionString("Data");
+            services.AddDbContext<ParkNGoContext>(options => options.UseSqlServer(connection));
+            services.AddScoped<SetSessionVariables>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
@@ -51,7 +65,8 @@ namespace ParkNGo
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
-
+            app.UseSession();
+            app.UseMiddleware<LogMiddleware>();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

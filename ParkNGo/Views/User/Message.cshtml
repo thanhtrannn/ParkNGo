@@ -1,0 +1,19 @@
+﻿@model ParkNGo.Models.Messages
+
+<form action="@Url.Action("Message", "User", Model)" method="post">
+    <div class="form-group">
+        <input asp-for="To" class="form-control" placeholder="To:" />
+        <br />
+        <input asp-for="Title" class="form-control" placeholder="Title" />
+        <br />
+        <textarea asp-for="Body" class="form-control" rows="5" placeholder="Body"></textarea>
+        <br />
+        <input type="submit" class="btn btn-primary" value="Compose" />
+        @Html.HiddenFor(x => x.MessageId)
+    </div>
+</form>
+
+<script>
+    $(document).ready(function () {
+    });
+</script>

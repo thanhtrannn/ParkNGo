@@ -1,0 +1,129 @@
+﻿@model ParkNGo.Models.UserProperty
+<!-- Modal -->
+<div class="modal fade" id="reviewModal" tabindex="-1" role="dialog" aria-labelledby="reviewModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <!--
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="commentModalLabel">Comment</h4>
+            </div>-->
+            <div class="modal-body">
+                <div class="form-group text-center leave-rating-review">
+                    <label class="control-label">Leave a Review</label>
+                    <div class="message"></div>
+                    <div class="rating-stars text-center">
+                        <span class="fa fa-star" id="rating-1"></span>
+                        <span class="fa fa-star" id="rating-2"></span>
+                        <span class="fa fa-star" id="rating-3"></span>
+                        <span class="fa fa-star" id="rating-4"></span>
+                        <span class="fa fa-star" id="rating-5"></span>
+                    </div>
+                    <br />
+                    <textarea id="leave-review" class="form-control" rows="3"></textarea>
+                </div>
+                <button type="button" class="btn btn-primary" id="save-comment">Save changes</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="top-property-section">
+    <img class="img-rounded img-responsive property-preview-img" src="data:image/jpeg;base64,@Convert.ToBase64String(Model.ImageUrl)" />
+    <br />
+    <div class="text-center">
+        <h4><strong>@Model.PropAddress</strong></h4>
+    </div>
+    <br />
+    <div class="property-description-sec">
+        <p>@Model.Description</p>
+    </div>
+
+
+    <div id="lower-property-section">
+        <br />
+        <div class="prop-rating text-center">
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+        </div>
+        <br />
+        <div id="review-section">
+
+        </div>
+    </div>
+    <br />
+    <div class="text-center">
+        <div class="btn-group property-detail-btn" role="group" aria-label="...">
+            <input type="button" class="btn btn-danger" value="Filter" id="filter-btn" />
+            <input type="button" class="btn btn-danger" value="Schedule" id="schedule-btn" />
+            <input type="button" class="btn btn-danger" value="Review" id="comment-review" />
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        var rating = "";
+        $("#filter-btn").on("click", function () {
+            $("#filter-section").show();
+            $("#detail-section").hide();
+        });
+        // toggle modal allowing user to comment
+        $("#comment-review").on("click", function () {
+            $("#reviewModal").modal('toggle');
+            $("[id^='rating-']").hover(function () {
+                $("[id^='rating-']").each(function () {
+                    $(this).removeClass("checked");
+                });
+                var upTo = this.id.split("-")[1];
+                rating = upTo;
+                for (var i = 0; i <= upTo; i++) {
+                    $("#rating-" + i).addClass("checked");
+                }
+            });  
+        });
+
+        // open book property view
+        $("#schedule-btn").on("click", function () {
+            var property = '@Model.PropertyId';
+            document.location = '@Url.Action("BookProperty","User",new { propertyId = Model.PropertyId}) ';
+        });
+
+        // save comment and rating for property
+        $("#save-comment").on("click", function () {
+            $.ajax({
+                type: 'POST',
+                url: 'SaveReview',
+                data: {
+                    'comment': $("#leave-review").val(),
+                    'id': '@Model.PropertyId',
+                    'rating': rating
+                    },
+                success: function (data, textStatus, jqXHR) {
+                    getMessage('Success', 'leave-rating-review', data);
+                    $("#save-comment").hide();
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log(jqXHR);
+                    getMessage('Error', 'message', jqXHR.responseText);
+                    console.log("fail");
+                }
+            })
+        });
+
+        // display rating in infowindow
+        var propertyRating = "@Model.Rating";
+         console.log(propertyRating);
+        if (propertyRating !== "") {
+            var index = 0;
+            $(".prop-rating").find("span").each(function () {
+                if (index < propertyRating) {
+                    $(this).addClass("checked");
+                }
+                index++;
+            });
+        }
+    });
+</script>

@@ -1,0 +1,17 @@
+﻿@{
+    var success = string.Empty;
+    if (TempData["Success"] != null)
+    {
+        success = TempData["Success"].ToString();
+    }
+    else if (ViewData["Success"] != null)
+    {
+        success = ViewData["Success"].ToString();
+    }
+}
+<div class="alert alert-success" role="alert">
+    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+    <span class="sr-only">Success:</span>
+    @success
+</div>
+

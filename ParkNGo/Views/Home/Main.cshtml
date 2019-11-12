@@ -1,24 +1,24 @@
-﻿
+﻿@model IEnumerable<ParkNGo.Models.UserProperty>
+@using Microsoft.Extensions.Configuration
+@inject IConfiguration configuration
 @{
+    var mod = Model;
     ViewData["Title"] = "Main";
 }
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKRHQVvAH-qN5L15bFgwciXKKXgPUraag&callback=initMap" async defer></script>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKRHQVvAH-qN5L15bFgwciXKKXgPUraag&libraries=places"></script>
 <style>
-    .container, .body-content {
+    .main-section {
         height: 100%;
         width: 100%;
         margin: 0;
         padding: 0;
+        margin-top: 6vh;
     }
 
     #main-overlay {
-        position: absolute;
-        top: 15%;
-        left: 0px;
-        z-index: 99;
-        background-color: #222;
-        height: 65vh;
-        width: 30vh;
+        background-color: #152238;
+        height: 88vh;
         color: white;
         padding: 15px;
     }
@@ -26,42 +26,164 @@
     .row {
         margin: 0px;
     }
-</style>
 
-<div id="map"></div>
-<div id="main-overlay">
-    <div id="" class="row">
-        <div>
-            <h2>Welcome!</h2>
-            <hr />
-            <p>
-                Park N Go is a startup that provides user with cheap parking around the vicinity they are visiting.
-                We provide tools, information and connection with people that will allow you to plan your trip
-                according and most importantly as cheap as possible for parking.
-            </p>
-            <br />
-            <div class="form-group">
-                <input type="button" class="btn btn-primary" value="Get Started" id="main-start-btn" />
+    .img-ads {
+        max-width: 175px;
+        margin: 0px auto;
+    }
+</style>
+<div class="row">
+    <div class="remove-padding col-sm-4">
+        <div id="main-overlay">
+            <div id="filter-section">
+                <h2 class="text-center">Welcome!</h2>
+                <hr />
+                <p>
+                    Park N Go is a startup that provides user with cheap parking around the vicinity they are visiting.
+                    We provide tools, information and connection with people that will allow you to plan your trip
+                    according and most importantly as cheap as possible for parking.
+                </p>
+                <br />
+                <div class="form-group text-center">
+                    <input type="button" class="btn btn-primary" value="Get Started" id="main-start-btn" />
+                </div>
+                <img class="img-responsive img-ads" src="~/images/icons/Ads.jpg" />
             </div>
-            <img src="~/images/ad-mockup.jpg" />
+            <div id="detail-section">
+            </div>
         </div>
     </div>
+    <div class="remove-padding col-sm-8">
+        <div id="map"></div>
+    </div>
 </div>
+
 <script>
+    var autocomplete;
     var defaultLat = 43.2574316;
     var defaultLong = -79.89;
     var map;
-    function initMap() {
-
+    var circle;
+    var initMap = function() {
         var mySettings = {
             center: { lat: defaultLat, lng: defaultLong },
             zoom: 12
         };
-
         map = new google.maps.Map(document.getElementById('map'), mySettings);
 
     };
+ 
+    function onPlaceChanged() {
+        var place = autocomplete.getPlace();
+        var radius = parseInt($("#set-range").val());
+        var zoom = 15;
+        
+        if (radius > 1000 && radius <= 2000) {
+            zoom = 14;
+        } else if (radius > 2000 && radius <= 5000) {
+            zoom = 13;
+        } else if (radius < 500) {
+            zoom = 17;
+        } else if (radius >= 500 && radius < 1000) {
+            zoom = 16;
+        }
+        if (place.geometry) {
+            map.panTo(place.geometry.location);
+            map.setZoom(zoom);
+            // deletes previous circle
+            if (circle != undefined) {
+                circle.setMap(null);
+            }
+            // create circle
+            circle = new google.maps.Circle({
+                strokeColor: '#AAF0000',
+                strokeWeight: 1,
+                    map: map,
+                    radius: radius,    // 10 miles in metres
+                    fillColor: '#AA0000',
+                    fillOpacity: 0.35,
+                    center: place.geometry.location
+            });
+        }
+        else {
+          document.getElementById('search').placeholder = 'Search by place, address, cities';
+        }
+    }
+
+    var getReviews = function (id) {
+        $.ajax({
+            type: 'get',
+            datatype: 'html',
+            url: 'getViewComponent',
+            data: { 'view': 'Review', 'component': 'Main', 'username': id },
+            complete: function (data, textstatus, jqxhr) {
+                $("#review-section").append(data.responseText);
+            },
+            error: function (jqxhr, textstatus, errorthrown) {
+                console.log("fail");
+            }
+        });
+    };
+
     $(document).ready(function () {
-        initMap;
+        initMap();
+        $("#topleft-username").html("@ViewData["Username"]");
+
+        // get started button clicked
+        $("#main-start-btn").on("click", function () {
+             $.ajax({
+                type: 'GET',
+                dataType: 'html',
+                url: 'GetViewComponent',
+                data: { 'view': 'Default', 'component': 'Main' },
+                 complete: function (data, textStatus, jqXHR) {
+                     $("#filter-section").html(data.responseText);
+                     autocomplete = new google.maps.places.Autocomplete(
+                     (document.getElementById('search')), {
+                        componentRestrictions: {country: 'ca'}
+                         });
+
+                     places = new google.maps.places.PlacesService(map);
+                     autocomplete.addListener('place_changed', onPlaceChanged);
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log("fail");
+                }
+            })
+        });
+        var marker;
+        // turn list of property to json data
+        var listOfProperty = @Html.Raw(Json.Serialize(mod));
+        listOfProperty.forEach(function (property) {
+            marker = new google.maps.Marker({
+                position: { lat: property.lat, lng: property.long },
+                map: map,
+                title: property.propAddress,
+                id: property.propertyId
+            });
+                    // add lister for markers
+        marker.addListener("click", function () {
+            var thisId = this.id;
+            $.ajax({
+                type: 'get',
+                datatype: 'html',
+                url: 'getViewComponent',
+                data: { 'view': 'infoWindow', 'component': 'Main', 'username': this.id },
+                complete: function (data, textstatus, jqxhr) {
+                    $("#filter-section").hide();
+                    $("#detail-section").show();
+                    $("#detail-section").html(data.responseText);
+                    getReviews(thisId);
+
+                },
+                error: function (jqxhr, textstatus, errorthrown) {
+                    console.log("fail");
+                }
+            });
+        });
+        })
+
+
+
     });
 </script>

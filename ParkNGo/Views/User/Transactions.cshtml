@@ -1,0 +1,45 @@
+﻿@model IEnumerable<ParkNGo.Models.Transaction>
+
+@{
+    ViewData["Title"] = "Transactions";
+}
+
+<link href="~/css/dataTables.bootstrap.css" rel="stylesheet" />
+<script src="~/js/datatables.js"></script>
+<style>
+</style>
+<div class="container-fluid">
+    <h2>@ViewData["Title"]</h2>
+    <hr />
+    <div class="row">
+        <div class="col-md-12" id="transaction-section">
+            <!--<input type="button" class="btn btn-primary" value="Compose" id="compose-btn"/>-->
+            <table id="Transactions" class=" hover table display table-striped">
+                <thead>
+                    <tr class="bg-primary">
+                        <th>Transaction ID</th>
+                        <th>Amount</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                    <tr class="message-call" id="transaction-@Html.DisplayFor(modelItem => item.TransactionId)">
+                        <td>@Html.DisplayFor(modelItem => item.TransactionId)</td>
+                        <td>$ @Html.DisplayFor(modelItem => item.Amount)</td>
+                        <td>@Html.DisplayFor(modelItem => item.TransactionDate)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Status)</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        var table = $("#Transactions").DataTable();
+    });
+</script>

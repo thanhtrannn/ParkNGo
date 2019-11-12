@@ -1,23 +1,38 @@
-﻿
+﻿@model ParkNGo.Models.UserProperty
 @{
     ViewData["Title"] = "Property";
 }
 
-<div id="registration-three" class="form-group">
-    <h2>Property</h2>
-    <hr />
-    <label class="control-label">Location</label>
-    <input class="form-control" type="text" />
-    <label class="control-label">Description</label>
-    <input class="form-control" type="text" />
-    <br />
-    <input type="button" class="btn btn-primary" id="Set" value="Set Schedule">
-    <input type="button" class="btn btn-danger" id="ThreeSkip" value="Skip" />
-</div>
+    <div id="registration-three" class="form-group">
+        <h2>@ViewData["Title"]</h2>
+        <hr />
+        <label asp-for="PropAddress" class="control-label"></label>
+        <input asp-for="PropAddress" class="form-control" />
+        <label asp-for="PropAddress" class="control-label"></label>
+        <input asp-for="PropAddress" class="form-control" />
+        <label asp-for="PropCity" class="control-label"></label>
+        <input asp-for="PropCity" class="form-control" />
+        <label asp-for="PropProvinceId" class="control-label"></label>
+        <input asp-for="PropProvinceId" class="form-control" />
+        <label asp-for="PropPostalCode" class="control-label"></label>
+        <input asp-for="PropPostalCode" class="form-control" />
+        <label asp-for="Country" class="control-label"></label>
+        <input asp-for="Country" class="form-control" />
+        <label asp-for="ImageUrl" class="control-label"></label>
+        <input asp-for="ImageUrl" class="form-control"/>
+        <label asp-for="Description" class="control-label"></label>
+        <input asp-for="Description" class="form-control" />
+        @Html.HiddenFor(x => x.Long)
+        @Html.HiddenFor(x => x.Lat)
+        <br />
+        <input type="button" class="btn btn-primary" id="Set" value="Set Schedule">
+        <input type="button" class="btn btn-danger" id="ThreeSkip" value="Skip" />
+    </div>
 
 <script>
     $(document).ready(function () {
-          $("#Set").click(function () {
+        $("#PropAddress").a
+        $("#Set").click(function () {
             $("#registration-three").hide();
             $.ajax({
                 type: 'GET',

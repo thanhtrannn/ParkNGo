@@ -1,0 +1,149 @@
+﻿@model ParkNGo.Models.UserProperty
+
+<link href="~/css/jquery-ui.css" rel="stylesheet" />
+<script src="~/js/jquery-ui.js"></script>
+<link rel="stylesheet" href="~/css/jquery.schedule.css">
+<script src="~/js/jquery.schedule.js"></script>
+<style>
+    #schedule-section {
+        height: 60vh;
+    }
+
+</style>
+
+<div class="container">
+    <h2>Schedule</h2>
+    <hr />
+    <!-- Modal -->
+    <div class="modal fade" id="confirmBooking" tabindex="-1" role="dialog" aria-labelledby="confirmBookingLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <!--
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="commentModalLabel">Comment</h4>
+                </div>-->
+                <div class="modal-body">
+                    <div class="form-group text-center modalbody">
+                        <p>Would you like to proceed to payment?</p>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="continue-payment-btn">Continue</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="message"></div>
+    <div id="schedule-section"></div>
+    <br />
+    @Html.HiddenFor(x => x.PropertyId)
+    @Html.HiddenFor(x => x.Username)
+    <input type="button" class="btn btn-primary" value="Book Time" id="set-sched-btn" />
+</div>
+<script>
+    $(document).ready(function () {
+        //$('tbody').on("click", "td", function () {
+        //    $(this).css("background-color", "red");
+        //});
+        var data = @Html.Raw(Json.Serialize(@Model.AvailabilityId));
+        var object = JSON.parse(data);
+        $("#schedule-section").jqs({
+            mode: 'read',
+            periodBackgroundColor: "rgba(205, 234, 212, 0.8)",
+            periodTitle: 'Book',
+            daysList: [
+                'Mon',
+                'Tues',
+                'Wed',
+                'Thur',
+                'Fri',
+                'Sat',
+                'Sun'
+            ],
+            data: object,
+            periodRemoveButton: 'Remove',
+            periodDuplicateButton: 'Duplicate',
+            onClickPeriod: function () {
+                console.log(this);
+            }
+        });
+        $(".jqs-period-container").on("click", function () {
+            if (this.style.backgroundColor !== "rgba(255, 0, 0, 0.8)") {
+                if ($(this).hasClass("toBook")) {
+                    $(this).removeClass("toBook");
+                    $(this).css("background-color", "rgba(205, 234, 212, 0.8)")
+                }
+                else {
+                    $(this).addClass("toBook");
+                    $(this).css("background-color", "rgba(0, 200, 0, 0.5)")
+                }
+            }
+        });
+        var getBooking;
+        var amount = 0;
+
+        $("#set-sched-btn").on("click", function () {
+            var timeSelected = false;
+            var booking = [{day: 0, periods: []}, {day: 1, periods: []}, {day: 2, periods: []}, {day: 3, periods: []}, {day: 4, periods: []}, {day: 5, periods: []}, {day: 6, periods: []}]
+            var data = $('#schedule-section').jqs('export');
+            data = JSON.parse(data);
+            getBooking = data;
+            data.forEach(function (e) {
+                if (e.periods.length > 0) {
+                    e.periods.forEach(function (per) {
+                        if (per["backgroundColor"].includes("rgba(0, 200, 0, 0.5)")) {
+                            booking[e.day]["periods"].push(per);
+                            amount += parseFloat(per["title"]);
+                            timeSelected = true;
+                        }
+                    });
+                }
+            });
+            if (timeSelected == true) {
+                $("#confirmBooking").modal("toggle");
+                $.ajax({
+                    type: 'POST',
+                    url: 'GetViewComponent',
+                    data: {
+                        view: "GetPayment",
+                        component: "Main"
+                    },
+                    success: function (data, textStatus, jqXHR) {
+                        $(".modalbody").html(data);
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        console.log(jqXHR);
+                        getMessage('Error', 'message', jqXHR.responseText);
+                        console.log("fail");
+                    }
+                })
+            }
+        });
+
+        $("#continue-payment-btn").on("click", function () {
+            if ($("#payment-selected").val() !== "") {
+                $.ajax({
+                    type: 'POST',
+                    url: 'ContinuePayment',
+                    data: {
+                        propertyOwner: '@Model.Username',
+                        propertyId: '@Model.PropertyId',
+                        details: JSON.stringify(getBooking),
+                        paymentId: $("#payment-selected").val(),
+                        amount: amount
+                    },
+                    success: function (data, textStatus, jqXHR) {
+                        getMessage('Success', 'modalbody', data);
+                        $("#continue-payment-btn").hide();
+       
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        console.log(jqXHR);
+                        getMessage('Error', 'message', jqXHR.responseText);
+                        console.log("fail");
+                    }
+                })  
+            }
+        });
+    });
+</script>

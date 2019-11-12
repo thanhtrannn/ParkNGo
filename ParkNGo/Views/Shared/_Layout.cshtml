@@ -1,35 +1,141 @@
 ﻿<!DOCTYPE html>
 <style>
+    .navbar-inverse {
+        background-color: #152238 !important;
+        border-color: #152238 !important;
+    }
+
+    .main-section {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        margin-top: 6vh;
+    }
+
+    .remove-padding {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    body {
+        padding: 0px;
+    }
+
+    .navbar-right {
+        margin-right: 15px !important;
+    }
+
+    .navbar-brand {
+        margin-left: 15px !important;
+    }
+
+    .navbar {
+        height: 6vh;
+        margin-bottom: 0px !important;
+    }
+
+    .navbar-inverse .navbar-brand {
+        color: white !important;
+    }
+
+    #topleft-username, .glyphicon-user {
+        color: white;
+    }
+
+    @@media only screen and (max-width: 768px) {
+        .navbar {
+            height: auto;
+            min-height: 6vh;
+            margin-bottom: 0px !important;
+        }
+
+        .navbar-brand {
+            margin-left: 0px !important;
+        }
+    }
+
     /* Footer Section */
     footer {
         position: fixed;
         height: 6vh;
-        background-color: #222;
+        background-color: #152238;
         bottom: 0px;
         left: 0px;
         right: 0px;
         margin-bottom: 0px;
-        color: #9d9d9d;
+        color: white;
         line-height: 50px;
         text-align: center;
     }
-    .icon-area{
+
+    .icon-area {
         text-align: right;
     }
-    .forgot-password-section{
+
+    .forgot-password-section {
         text-align: right;
     }
-        /* Always set the map height explicitly to define the size of the div
+    /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
     #map {
-        height: 100%;
+        height: 88vh;
         width: 100%;
     }
     /* Optional: Makes the sample page fill the window. */
     html, body {
-        height: 100%;
         margin: 0;
         padding: 0;
+    }
+
+    .property-img {
+        max-height: 100px;
+        max-width: 50px;
+    }
+
+    #image_upload_preview {
+        text-align: center;
+        max-height: 400px;
+        width: auto;
+        height: auto;
+        margin: 25px 0px;
+    }
+
+    .infowindow {
+        height: 50vh;
+        width: 50vh;
+    }
+
+    .cc-image {
+        max-width: 200px;
+    }
+
+    .property-preview-img {
+        margin: 0px auto;
+    }
+
+    .property-description-sec {
+        height: 15vh;
+        overflow: auto;
+        text-overflow: ellipsis;
+    }
+
+    #review-section {
+        height: 10vh;
+        overflow: auto;
+        text-overflow: ellipsis;
+    }
+
+    .property-detail-btn {
+        margin: 0px auto;
+    }
+
+    .checked {
+        color: orange;
+    }
+
+    #reviewModal{
+        color:black;
     }
 </style>
 <html>
@@ -60,6 +166,7 @@
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
@@ -67,12 +174,14 @@
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
-   
+
+
 </head>
 
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+    <partial name="_CookieConsentPartial" />
+    <div class="main-section container body-content">
+        <nav class=" navbar navbar-inverse navbar-fixed-top">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -80,32 +189,38 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">ParkNGo</a>
+                <a asp-area="" asp-controller="Home" asp-action="Main" class="navbar-brand">ParkNGo</a>
             </div>
-            <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span><span id="topleft-username">Username</span></a>
-                    <ul class="dropdown-menu dropdown-items"></ul>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <partial name="_CookieConsentPartial" />
-
-    <div class="container body-content">
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="glyphicon glyphicon-user"></span>
+                            @if (@ViewData["Username"] != null)
+                            {
+                                <span id="topleft-username">@ViewData["Username"]</span>
+                            }
+                            else
+                            {
+                                <span id="topleft-username">Username</span>
+                            }
+                        </a>
+                        <ul id="username-dropdown" class="dropdown-menu dropdown-items"></ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
         @RenderBody()
-        <hr />
         <!-- Footer section -->
         <footer class="row">
-                <div class="col-md-4">123 Fake Street, Hamilton ON L9A 5K1</div>
-                <div class="col-md-4">support@parkforcheap.ca - (905) 921-5160</div>
-                <div class="col-md-4 icon-area">
-                    <a href="#"><img src="~/images/icons/linkedin32.png" /></a>
-                    <a href="#"><img src="~/images/icons/facebook32.png" /></a>
-                    <a href="#"><img src="~/images/icons/twitter32.png" /></a>
-                    <a href="#"><img src="~/images/icons/youtube32.png" /></a>
-                </div>
+            <div class="col-sm-4">123 Fake Street, Hamilton ON L9A 5K1</div>
+            <div class="col-sm-4">support@parkforcheap.ca - (905) 921-5160</div>
+            <div class="col-sm-4 icon-area">
+                <a href="#"><img src="~/images/icons/linkedin32.png" /></a>
+                <a href="#"><img src="~/images/icons/facebook32.png" /></a>
+                <a href="#"><img src="~/images/icons/twitter32.png" /></a>
+                <a href="#"><img src="~/images/icons/youtube32.png" /></a>
+            </div>
         </footer>
     </div>
 
@@ -113,3 +228,57 @@
     @RenderSection("Scripts", required: false)
 </body>
 </html>
+<script>
+    // modal to rate/review parking
+    var addReview = function () {
+
+    }
+
+    // gets success/error message and append to div class
+    var getMessage = function (type, div, msg) {
+        var message = msg;
+        var view = type;
+        $.ajax({
+            type: 'GET',
+            dataType: 'Html',
+            url: "GetViewComponent",
+            data: {"view": view, "component": "Additional", "message":message},
+            complete: function (data, textStatus, jqXHR) {
+                console.log(data)
+                $("." + div).html(data.responseText);
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log("fail");
+            }
+        });
+    }
+
+    var getDropdown = function () {
+        var user = "@ViewData["Username"]";
+
+        if (user != "") {
+            if ($("#my-account").length == 0) {
+                $("#username-dropdown").append("<li id='my-account'><a href='/Home/Account'>My Account</a></li>")
+            }
+            if ($("#logout").length == 0) {
+                $("#username-dropdown").append("<li id='logout'><a href='/Home/Logout'>Logout</a></li>")
+            }
+        }
+    };
+
+    $(document).ready(function () {
+        getDropdown();
+        // on window resize, have nav bar unfix it self when view on phone
+        $(window).resize(function () {
+            if ($(window).width() < 768) {
+                var navbarHeight = $(".navbar")[0].clientHeight;
+                $(".main-section").css("margin-top", navbarHeight + "px");
+                $(".left-user-info").css("height", "100%");
+            } else {
+                $(".main-section").css("margin-top", "6vh");
+                $(".left-user-info").css("height", "");
+            }
+        });
+
+    });
+</script>

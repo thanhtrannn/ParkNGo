@@ -1,0 +1,134 @@
+﻿
+@model ParkNGo.Models.UserProperty
+@using Microsoft.Extensions.Configuration
+@inject IConfiguration configuration
+@{
+    ViewData["Title"] = "Property";
+    var api = configuration["Google"];
+    var base64 = "";
+    var imgSrc = "~/images/icons/placeholder.png";
+    if ( Model != null) { 
+        if (Model.ImageUrl != null)
+        {
+            base64 = Convert.ToBase64String(Model.ImageUrl);
+            imgSrc = String.Format("data:image/png;base64,{0}", base64);
+        }
+    }
+
+}
+
+<div class="container-fluid">
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <h2>@ViewData["Title"]</h2>
+            <hr />
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="PropAddress" class="control-label"></label>
+                        <input asp-for="PropAddress" class="form-control" />
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-6 col-xs-6">
+                            <label asp-for="PropCity" class="control-label"></label>
+                            <input asp-for="PropCity" class="form-control" />
+                        </div>
+                        <div class="col-md-6 col-xs-6">
+                            <label asp-for="PropProvinceId" class="control-label"></label>
+                            <input asp-for="PropProvinceId" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-6 col-xs-6">
+                            <label asp-for="PropPostalCode" class="control-label"></label>
+                            <input asp-for="PropPostalCode" class="form-control" />
+                        </div>
+                        <div class="col-md-6 col-xs-6">
+                            <label asp-for="Country" class="control-label"></label>
+                            <input asp-for="Country" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="button" class="btn btn-primary" value="Check Address" id="address-checker" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Description" class="control-label"></label>
+                        <textarea asp-for="Description" rows="3" class="form-control"></textarea>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img id="image_upload_preview" class="img-responsive" src="@imgSrc" />
+                    <label class="control-label">Upload Image</label>
+                    <input name="file" id="file" class="form-control-file" type="file" />
+                </div>
+                <br />
+            </div>
+            @Html.HiddenFor(x => x.PropertyId)
+            @Html.HiddenFor(x => x.Long)
+            @Html.HiddenFor(x => x.Lat)
+        <div class="form-group">
+            <input type="Submit" disabled id="submit-btn" class="btn btn-primary" value="Set Property">
+            <a href="/Home/Account" class="btn btn-danger">Back</a>
+        </div>
+        </div>
+    </form>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#address-checker").on("click", function () {
+            var address = $("#PropAddress").val();
+            var city = $("#PropCity").val();
+            var postal = $("#PropPostalCode").val();
+            var country = $("#Country").val();
+            var toUseInUrl = address + ', ' + city + ', ' + postal + ', '+ country;
+            var url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + toUseInUrl + '&key=' + '@api';
+            console.log(url);
+            $.ajax({
+                type: 'GET',
+                dataType: 'json',
+                url: url,
+                complete: function (data, textStatus, jqXHR) {
+                    var results = data.responseJSON.results;
+                    if (results.length > 0) {
+                        $("#PropAddress").val(results[0].address_components[0].long_name + ' ' + results[0].address_components[1]['long_name']);
+                        $("#PropCity").val(results[0].address_components[3].long_name);
+                        $("#PropProvinceId").val(results[0].address_components[5].long_name);
+                        $("#Country").val(results[0].address_components[6].long_name);
+                        $("#PropPostalCode").val(results[0].address_components[7].long_name);
+                        $("#Long").val(results[0].geometry.location.lng);
+                        $("#Lat").val(results[0].geometry.location.lat);
+                        $("#submit-btn").prop("disabled", false);
+                    }
+
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log("fail");
+                }
+            });
+        });
+
+        // update image
+        function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                console.log(e);
+                $('#image_upload_preview').attr('src', e.target.result);
+            }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        @*var er = '@imgSrc';
+        console.log(er);
+        if ('@imgSrc' !== "") {
+            $('#image_upload_preview').attr('src', `@imgSrc`);
+        }*@
+
+        $("#file").change(function () {
+                readURL(this);
+        });
+    });
+</script>

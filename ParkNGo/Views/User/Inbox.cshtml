@@ -1,0 +1,66 @@
+﻿@model IEnumerable<ParkNGo.Models.Messages>
+
+@{
+    ViewData["Title"] = "Inbox";
+}
+
+<link href="~/css/dataTables.bootstrap.css" rel="stylesheet" />
+<script src="~/js/datatables.js"></script>
+<style>
+    .message-call:hover {
+        cursor: pointer;
+    }
+</style>
+<div class="container-fluid">
+    <h2>@ViewData["Title"]</h2>
+    <hr />
+    <div class="row">
+        <div class="col-md-8" id="inbox-history">
+            <!--<input type="button" class="btn btn-primary" value="Compose" id="compose-btn"/>-->
+            <table id="Inbox" class=" hover table display table-striped">
+                <thead>
+                    <tr class="bg-primary">
+                        <th>From</th>
+                        <th>Title</th>
+                        <th>Message</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr class="message-call" id="message-@Html.DisplayFor(modelItem => item.MessageId)">
+                            <td>@Html.DisplayFor(modelItem => item.From)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Title)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Body)</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-4" id="message-view">
+        </div>
+    </div>
+</div>
+<script>
+    function callMessage(id) {
+        $.ajax({
+            url: "Message",
+            data: { "id": id },
+            type: "get",
+            complete: function (data) {
+                $("#message-view").html(data.responseText);
+            }
+        });
+    }
+
+    $(document).ready(function () {
+        var table = $("#Inbox").DataTable();
+        callMessage();
+        $(".message-call").click(function () {
+            var getId = this.id.split("-")[1];
+            console.log(getId);
+            callMessage(getId);
+
+        });
+    });
+</script>

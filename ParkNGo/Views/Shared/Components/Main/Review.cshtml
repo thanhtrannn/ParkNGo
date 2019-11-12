@@ -1,0 +1,19 @@
+﻿@model IEnumerable<ParkNGo.Models.CommentRating>
+
+@{
+    ViewData["Title"] = "Review";
+}
+
+@foreach(var review in Model)
+{
+    <div id="review-section-@review.CommentId">
+        <span><em>"@review.Comment"</em></span>
+        <br />
+        <div class="text-right">
+            <span><strong>- @review.Username&emsp;</strong></span>
+        </div>
+    </div>
+    <br />
+}
+
+

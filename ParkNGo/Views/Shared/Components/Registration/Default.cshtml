@@ -1,33 +1,50 @@
 ﻿@model ParkNGo.Models.User
 
 @{
-    ViewData["Title"] = "Default";
+    ViewData["Title"] = "Registration";
 }
 
 <div id="registration-one" class="form-group">
-    <h2>Registration</h2>
+    <h2>@ViewData["Title"]</h2>
     <hr />
-    <label class="control-label">Username</label>
-    <input class="form-control" type="text" id="Username" />
-    <label class="control-label">Password</label>
-    <input class="form-control" type="password" />
+    <label asp-for="Username" class="control-label">Username</label>
+    <input asp-for="Username" class="form-control" />
+    <label asp-for="Password" class="control-label"></label>
+    <input asp-for="Password" class="form-control" type="password" />
     <label class="control-label">Retype Password</label>
     <input class="form-control" type="password" />
-    <label class="control-label">E-mail</label>
-    <input class="form-control" type="text" id="Email" />
-    <label class="control-label">Address</label>
-    <input class="form-control" type="text" />
-    <label class="control-label">City</label>
-    <input class="form-control" type="text" />
-    <label class="control-label">Province</label>
-    <input class="form-control" type="text" />
-    <label class="control-label">Postal Code</label>
-    <input class="form-control" type="text" />
-    <label class="control-label">Phone Number</label>
-    <input class="form-control" type="text" />
+    <label asp-for="FirstName" class="control-label"></label>
+    <input asp-for="FirstName" class="form-control" />
+    <label asp-for="LastName" class="control-label"></label>
+    <input asp-for="LastName" class="form-control" />
+    <label asp-for="Email" class="control-label"></label>
+    <input asp-for="Email" class="form-control" />
+    <label asp-for="BirthDate" class="control-label"></label>
+    <input asp-for="BirthDate" class="form-control" />
+    <label asp-for="Gender" class="control-label"></label>
+    <input asp-for="Gender" class="form-control" />
+    <label asp-for="Address" class="control-label"></label>
+    <input asp-for="Address" class="form-control" />
+    <label asp-for="City" class="control-label"></label>
+    <input asp-for="City" class="form-control" />
+    <label asp-for="ProvinceId" class="control-label"></label>
+    <input asp-for="ProvinceId" class="form-control" />
+    <label asp-for="PostalCode" class="control-label"></label>
+    <input asp-for="PostalCode" class="form-control" />
+    <label asp-for="PhoneNumber" class="control-label"></label>
+    <input asp-for="PhoneNumber" class="form-control" />
+    <label asp-for="SecretQuestion1" class="control-label"></label>
+    <input asp-for="SecretQuestion1" class="form-control" />
+    <label asp-for="SecretAnswer1" class="control-label"></label>
+    <input asp-for="SecretAnswer1" class="form-control" />
+    <label asp-for="SecretQuestion2" class="control-label"></label>
+    <input asp-for="SecretQuestion2" class="form-control" />
+    <label asp-for="SecretAnswer2" class="control-label"></label>
+    <input asp-for="SecretAnswer2" class="form-control" />
     <br />
     <input type="button" class="btn btn-primary" id="AddPayment" value="Add Payment">
     <input type="button" class="btn btn-danger" id="OneSkip" value="Skip" />
+    <input type="submit" class="btn btn-primary" value="Test" />
 </div>
 
 <script>

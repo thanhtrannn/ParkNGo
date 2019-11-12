@@ -1,0 +1,27 @@
+﻿@{
+    string error = string.Empty;
+    if (TempData["Error"] != null)
+    {
+        error = TempData["Error"].ToString();
+    }
+    else if (ViewData["Error"] != null)
+    {
+        error = ViewData["Error"].ToString();
+    }
+    if (error != "")
+    {
+        switch (error)
+        {
+            case "Server": error = "Error with server, please try again and/or contact administrator if problem persist"; break;
+            case "Not Found": error = "Student Number not found in database"; break;
+            case "Credentials": error = "You do not have the right credentials"; break;
+            default:
+                break;
+        }
+    }
+}
+<div class="alert alert-danger" role="alert">
+    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+    <span class="sr-only">Error:</span>
+    @error
+</div>

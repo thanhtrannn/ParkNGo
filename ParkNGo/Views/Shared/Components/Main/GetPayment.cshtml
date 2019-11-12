@@ -1,0 +1,9 @@
+﻿@model ParkNGo.Models.Payment
+
+<div class="form-group">
+    <label>Would you like to proceed to payment?</label>
+    <select class="form-control" id="payment-selected">
+        <option value="">Select One</option>
+        <option value="@Model.PaymentId">@Model.Number</option>
+    </select>
+</div>

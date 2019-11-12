@@ -1,0 +1,54 @@
+﻿@model ParkNGo.Models.Payment
+
+@{
+    ViewData["Title"] = "Payment";
+}
+
+<div class="container-fluid">
+    <form method="post">
+        <div class="form-group">
+            <h2>@ViewData["Title"]</h2>
+            <hr />
+            <div class="row">
+                <div class="col-sm-8 col-xs-6">        
+                        <label asp-for="Type" class="control-label"></label>
+                        <select asp-for="Type" class="form-control">
+                            <option value="">Select One</option>
+                            <option>Visa</option>
+                            <option>Mastercard</option>
+                        </select>
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <label asp-for="Number" class="control-label"></label>
+                    <input asp-for="Number" class="form-control" />
+                    <label asp-for="Expiration" class="control-label"></label>
+                    <input asp-for="Expiration" class="form-control" />
+                    <label asp-for="Ccv" class="control-label"></label>
+                    <input asp-for="Ccv" class="form-control" />
+                    @Html.HiddenFor(x => x.PaymentId)
+                    <br />
+                    <input type="Submit" class="btn btn-primary" value="Set Payment">
+                    <a href="/Home/Account" class="btn btn-danger">Back</a>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <img src="" id="creditCard" class="img-responsive cc-image" />
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<script>
+    $(document).ready(function () {
+        $("#Type").on("change", function (e) {
+            var img_src = "";
+            console.log(this.value)
+            switch (this.value) {
+                case "": img_src = ""; break;
+                case "Visa": img_src = "/images/visa.png"; break;
+                case "Mastercard": img_src = "/images/mastercard.png"; break;
+                default: break;
+            }
+            $("#creditCard").attr("src", img_src);
+        });
+    });
+</script>

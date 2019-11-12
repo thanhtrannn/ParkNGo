@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "Main";
+}
+
+    <div class="row">
+        @*<div class="form-group">
+            <label class="radio-inline">
+                <input type="radio" name="search-type" value="address "checked>Address
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="search-type" value="establishment">Places
+            </label>
+        </div>*@
+        <div class="form-group has-success has-feedback">
+            <input type="text" class="form-control" id="search" placeholder="Search by place, address, cities" />
+            <span class="glyphicon glyphicon-search form-control-feedback" aria-hidden="true"></span>
+        </div>
+        <input type="range" class="form-control" id="set-range" min="250" max="5000" value="1000" step="250" />
+        <div class="text-center">
+            <span id="range-amount"></span>
+        </div>
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <label class="form-check-label" for="defaultCheck1">
+                    Default checkbox
+                </label>
+            </div>
+        </div>
+    </div>
+
+        <script>
+            $(document).ready(function () {
+                $("#range-amount").html($("#set-range").val()/1000 + "km");
+                $("#set-range").on("change", function () {
+                    $("#range-amount").html($(this).val()/1000 + "km");
+                });
+            });
+
+        </script>

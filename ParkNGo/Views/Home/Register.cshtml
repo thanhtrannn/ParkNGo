@@ -1,10 +1,20 @@
-﻿
+﻿@model ParkNGo.Models.User
 @{
     ViewData["Title"] = "Register";
 }
 
-<div id="registration-section" class="container-fluid">
-    @await Component.InvokeAsync("Registration")
+<div class="container-fluid">
+    <form method="post" id="registration-section">
+        @if (Model != null)
+        {
+            @await Component.InvokeAsync("Registration", new { username = Model.Username })
+        }
+        else
+        {
+            @await Component.InvokeAsync("Registration")
+        }
+
+    </form>
 </div>
 <hr />
 <div class="container-fluid">
