@@ -4,82 +4,224 @@
     ViewData["Title"] = "Registration";
 }
 
-<div id="registration-one" class="form-group">
-    <h2>@ViewData["Title"]</h2>
-    <hr />
-    <label asp-for="Username" class="control-label">Username</label>
-    <input asp-for="Username" class="form-control" />
-    <label asp-for="Password" class="control-label"></label>
-    <input asp-for="Password" class="form-control" type="password" />
-    <label class="control-label">Retype Password</label>
-    <input class="form-control" type="password" />
-    <label asp-for="FirstName" class="control-label"></label>
-    <input asp-for="FirstName" class="form-control" />
-    <label asp-for="LastName" class="control-label"></label>
-    <input asp-for="LastName" class="form-control" />
-    <label asp-for="Email" class="control-label"></label>
-    <input asp-for="Email" class="form-control" />
-    <label asp-for="BirthDate" class="control-label"></label>
-    <input asp-for="BirthDate" class="form-control" />
-    <label asp-for="Gender" class="control-label"></label>
-    <input asp-for="Gender" class="form-control" />
-    <label asp-for="Address" class="control-label"></label>
-    <input asp-for="Address" class="form-control" />
-    <label asp-for="City" class="control-label"></label>
-    <input asp-for="City" class="form-control" />
-    <label asp-for="ProvinceId" class="control-label"></label>
-    <input asp-for="ProvinceId" class="form-control" />
-    <label asp-for="PostalCode" class="control-label"></label>
-    <input asp-for="PostalCode" class="form-control" />
-    <label asp-for="PhoneNumber" class="control-label"></label>
-    <input asp-for="PhoneNumber" class="form-control" />
-    <label asp-for="SecretQuestion1" class="control-label"></label>
-    <input asp-for="SecretQuestion1" class="form-control" />
-    <label asp-for="SecretAnswer1" class="control-label"></label>
-    <input asp-for="SecretAnswer1" class="form-control" />
-    <label asp-for="SecretQuestion2" class="control-label"></label>
-    <input asp-for="SecretQuestion2" class="form-control" />
-    <label asp-for="SecretAnswer2" class="control-label"></label>
-    <input asp-for="SecretAnswer2" class="form-control" />
-    <br />
-    <input type="button" class="btn btn-primary" id="AddPayment" value="Add Payment">
-    <input type="button" class="btn btn-danger" id="OneSkip" value="Skip" />
-    <input type="submit" class="btn btn-primary" value="Test" />
-</div>
+    <div id="registration-one" class="form-group has-feedback">
+        <h2>@ViewData["Title"]</h2>
+        <hr />
+        <div class="message"></div>
+        <div class="form-group success-or-error">
+            <label asp-for="Username" class="control-label">Username</label>
+            <input asp-for="Username" class="form-control" aria-describedby="help-message" />
+            <span id="help-message" class="help-block"></span>
+        </div>
+        <div class="form-group password-field">
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label asp-for="Password" class="control-label"></label>
+                    <input asp-for="Password" class="form-control" type="password" />
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="control-label">Retype Password</label>
+                    <input id="retype-password" class="form-control" type="password" />
+                </div>
+            </div>
+            <span id="help-password" class="help-block"></span>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-3">
+                <label asp-for="FirstName" class="control-label"></label>
+                <input asp-for="FirstName" class="form-control" />
+            </div>
+            <div class="form-group col-md-3">
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" />
+            </div>
+            <div class="form-group col-md-3">
+                <label asp-for="BirthDate" class="control-label"></label>
+                <input asp-for="BirthDate" class="form-control" />
+            </div>
+            <div class="form-group col-md-3">
+                <label asp-for="Gender" class="control-label"></label>
+                <select asp-for="Gender" class="form-control">
+                    <option value="">Select One</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-sm-8">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+            </div>
+            <div class="form-group col-sm-4">
+                <label asp-for="PhoneNumber" class="control-label"></label>
+                <input asp-for="PhoneNumber" class="form-control" />
+            </div>
+
+        </div>
+        <div class="form-group">
+            <label asp-for="Address" class="control-label"></label>
+            <input asp-for="Address" class="form-control" />
+        </div>
+
+        <div class="row">
+            <div class="form-group col-sm-4">
+                <label asp-for="City" class="control-label"></label>
+                <input asp-for="City" class="form-control" />
+            </div>
+            <div class="form-group col-sm-4">
+                <label asp-for="ProvinceId" class="control-label"></label>
+                <input asp-for="ProvinceId" class="form-control" />
+            </div>
+            <div class="form-group col-sm-4">
+                <label asp-for="PostalCode" class="control-label"></label>
+                <input asp-for="PostalCode" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="SecretQuestion1" class="control-label"></label>
+            <input asp-for="SecretQuestion1" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="SecretAnswer1" class="control-label"></label>
+            <input asp-for="SecretAnswer1" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="SecretQuestion2" class="control-label"></label>
+            <input asp-for="SecretQuestion2" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="SecretAnswer2" class="control-label"></label>
+            <input asp-for="SecretAnswer2" class="form-control" />
+        </div>
+        <br />
+        <input type="button" class="btn btn-primary" id="AddPayment" value="Add Payment">
+        <input type="button" class="btn btn-danger" id="OneSkip" value="Skip" />
+    </div>
 
 <script>
+    var checkField = function () {
+
+        var invalidUserAndPass = false;
+        var invalidInput = false;
+        // check for empty fields
+        $("#registration-one :input").each(function () {
+            if ($(this).val() === "" && this.id !== "BirthDate") {
+                invalidInput = true;
+                $(this).parent().addClass("has-error");
+            } else {
+                $(this).parent().removeClass("has-error");
+            }
+        })
+        // check if password and password has error
+        $(".form-group").each(function () {
+            if ($(this).hasClass("has-error")) {
+                invalidUserAndPass = true;
+            }
+        });
+        if (invalidUserAndPass === true || invalidInput === true) {
+            $('html, body').animate({scrollTop: '0px'}, 300);
+            return false;
+        }
+        else {
+            return true
+        }
+
+    };
     $(document).ready(function () {
         $("#AddPayment").click(function () {
-            $("#registration-one").hide();
+            var checkFields = checkField()
+            if (checkFields === true) {
+                 $(".message").html();
+                $("#registration-one").hide();
+                $.ajax({
+                    type: 'GET',
+                    dataType: 'json',
+                    url: 'GetViewComponent',
+                    data: { 'view': 'Payment' },
+                    complete: function (data, textStatus, jqXHR) {
+                        $("#registration-section").append(data.responseText);
+                        $(".progress-bar-striped").css("width", "50%");
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        console.log("fail");
+                    }
+                })
+            } else {
+                getMessage('Error', 'message', "Please fill all fields and make sure username and password is acceptable");
+            }
+        });
+        $("#OneSkip").click(function () {
+            var checkFields = checkField()
+            if (checkFields === true) {
+                $(".message").html();
+                $("#registration-one").hide();
+                $.ajax({
+                    type: 'GET',
+                    dataType: 'json',
+                    url: 'GetViewComponent',
+                    data: { 'view': 'Property' },
+                    complete: function (data, textStatus, jqXHR) {
+                        $("#registration-section").append(data.responseText);
+                        $(".progress-bar-striped").css("width", "75%");
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        console.log("fail");
+                    }
+                })
+            } else {
+                getMessage('Error', 'message', "Please fill all fields and make sure username and password is acceptable");
+
+            }
+        });
+
+        $("#Username").focusout(function () {
+            var user = $(this).val();
             $.ajax({
                 type: 'GET',
                 dataType: 'json',
-                url: 'GetViewComponent',
-                data: { 'view': 'Payment' },
+                url: 'CheckUsername',
+                data: { 'username': $(this).val() },
                 complete: function (data, textStatus, jqXHR) {
-                    $("#registration-section").append(data.responseText);
-                    $(".progress-bar-striped").css("width", "50%");
+                    if (data.responseText === "true") {
+                        $(".success-or-error").addClass("has-error");
+                        $(".success-or-error").removeClass("has-success");
+                        $("#help-message").html(user + " is unavailable to use");
+                    } else {
+                        $(".success-or-error").addClass("has-success");
+                        $(".success-or-error").removeClass("has-error");
+                        $("#help-message").html(user + " is available to use");
+                    }
                 },
                 error: function (jqXHR, textStatus, errorThrown) {
                     console.log("fail");
                 }
             })
         });
-        $("#OneSkip").click(function () {
-            $("#registration-one").hide();
-            $.ajax({
-                type: 'GET',
-                dataType: 'json',
-                url: 'GetViewComponent',
-                data: { 'view': 'Property' },
-                complete: function (data, textStatus, jqXHR) {
-                    $("#registration-section").append(data.responseText);
-                    $(".progress-bar-striped").css("width", "75%");
-                },
-                error: function (jqXHR, textStatus, errorThrown) {
-                    console.log("fail");
-                }
-            })
+
+        $("#retype-password").keyup(function () {
+            if ($(this).val() !== $("#Password").val()) {
+                $(".password-field").addClass("has-error")
+                $(".password-field").removeClass("has-success")
+                $("#help-password").html("Password does not match!")
+            } else {
+                $(".password-field").removeClass("has-error")
+                $(".password-field").addClass("has-success")
+                $("#help-password").html("Password matches")
+            }
+        });
+        $("#Password").keyup(function () {
+            if ($(this).val() !== $("#retype-password").val()) {
+                $(".password-field").addClass("has-error")
+                $(".password-field").removeClass("has-success")
+                $("#help-password").html("Password does not match!")
+            } else {
+                $(".password-field").removeClass("has-error")
+                $(".password-field").addClass("has-success")
+                $("#help-password").html("Password matches")
+            }
         });
     });
 

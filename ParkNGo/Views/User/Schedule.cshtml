@@ -26,7 +26,6 @@
         //    $(this).css("background-color", "red");
         //});
         var object = {};
-        console.log("@Model.AvailabilityId");
         if ("@Model.AvailabilityId" !== "") {
             var data = @Html.Raw(Json.Serialize(@Model.AvailabilityId));
             object = JSON.parse(data);

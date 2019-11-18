@@ -1,0 +1,68 @@
+﻿@model IEnumerable<ParkNGo.Models.User>
+<style>
+    #admin-table tr{
+        cursor: pointer;
+    }
+</style>
+<link href="~/css/dataTables.bootstrap.css" rel="stylesheet" />
+<script src="~/js/datatables.js"></script>
+<div class="container-fluid">
+    <h2>Users</h2>
+    <hr />
+    <table class="table display table-hover table-striped" id="admin-table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Username)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LastName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PhoneNumber)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr id="@item.Username">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Username)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LastName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PhoneNumber)
+                    </td>
+                    <td>
+                        <a asp-action="Delete" asp-route-id="@item.Username">Delete</a>
+                    </td>
+                </tr="@item.Username">
+            }
+        </tbody>
+    </table>
+</div>
+<script>
+    $(document).ready(function () {
+        var table = $("#admin-table").DataTable();
+        $("#admin-table tr").on("click", function () {
+            console.log(this.id)
+            window.location.href = "/Admin/Details/" + this.id
+        });
+    });
+</script>

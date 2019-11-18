@@ -1,0 +1,181 @@
+﻿
+@model ParkNGo.Models.Parking
+@using Microsoft.Extensions.Configuration
+@inject IConfiguration configuration
+@{
+    ViewData["Title"] = "Parking";
+    var api = configuration["Google"];
+    var base64 = "";
+    //var imgSrc = "~/images/icons/placeholder.png";
+    var imgSrc = "https://localhost:44316//images/icons/placeholder.png";
+    if (Model != null)
+    {
+        if (Model.Image != null)
+        {
+            base64 = Convert.ToBase64String(Model.Image);
+            imgSrc = String.Format("data:image/png;base64,{0}", base64);
+        }
+    }
+
+}
+
+<div class="container-fluid">
+    <form method="post" enctype="multipart/form-data">
+        <h2>@ViewData["Title"]</h2>
+        <hr />
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="Type" class="control-label"></label>
+                    <select asp-for="Type" class="form-control">
+                        <option value="">Select One</option>
+                        <option>Private Parking Lot</option>
+                        <option>Street Parking</option>
+                        <option>Public Parking Lot</option>
+                        <option>Green Parking Lot</option>
+                        <option>Paid Parking Lot</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Address" class="control-label"></label>
+                    <input asp-for="Address" class="form-control" />
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-6 col-xs-6">
+                        <label asp-for="City" class="control-label"></label>
+                        <input asp-for="City" class="form-control" />
+                    </div>
+                    <div class="col-md-6 col-xs-6">
+                        <label asp-for="Province" class="control-label"></label>
+                        <input asp-for="Province" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-6 col-xs-6">
+                        <label asp-for="PostalCode" class="control-label"></label>
+                        <input asp-for="PostalCode" class="form-control" />
+                    </div>
+                    <div class="col-md-6 col-xs-6">
+                        <label asp-for="Country" class="control-label"></label>
+                        <input asp-for="Country" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="button" class="btn btn-primary" value="Check Address" id="address-checker" />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Description" class="control-label"></label>
+                    <textarea asp-for="Description" rows="3" class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label asp-for="Cost" class="control-label"></label>
+                                <input asp-for="Cost" class="form-control" />
+                            </div>
+                            <div class="col-md-9">
+                                <label asp-for="Rate" class="control-label"></label>
+                                <select asp-for="Rate" class="form-control">
+                                    <option value="">Select One</option>
+                                    <option>Half Hour</option>
+                                    <option>Hour</option>
+                                    <option>Day</option>
+                                    <option>Week</option>
+                                    <option>Month</option>
+                                    <option></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label asp-for="Lat" class="control-label"></label>
+                                <input asp-for="Lat" class="form-control" />
+                            </div>
+                            <div class="col-md-3">
+                                <label asp-for="Long" class="control-label"></label>
+                                <input asp-for="Long" class="form-control" />
+                            </div>
+                            <div class="col-md-3">
+                                <label asp-for="HoursFrom" class="control-label"></label>
+                                <input asp-for="HoursFrom" class="form-control" />
+                            </div>
+                            <div class="col-md-3">
+                                <label asp-for="HoursTo" class="control-label"></label>
+                                <input asp-for="HoursTo" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                    <img id="image_upload_preview" class="img-responsive" src="@imgSrc" />
+                    <label class="control-label">Upload Image</label>
+                    <input name="file" id="file" class="form-control-file" type="file" />
+                </div>
+                <br />
+            </div>
+            @Html.HiddenFor(x => x.ParkingId)
+            <div class="form-group">
+                <input type="Submit" id="submit-btn" class="btn btn-primary" value="Set Parking">
+                <a href="/Admin/Parking" class="btn btn-danger">Back</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#address-checker").on("click", function () {
+            var address = $("#Address").val();
+            var city = $("#City").val();
+            var postal = $("#PostalCode").val();
+            var country = $("#Country").val();
+            var toUseInUrl = address + ', ' + city + ', ' + postal + ', '+ country;
+            var url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + toUseInUrl + '&key=' + '@api';
+            $.ajax({
+                type: 'GET',
+                dataType: 'json',
+                url: url,
+                complete: function (data, textStatus, jqXHR) {
+                    var results = data.responseJSON.results;
+                    if (results.length > 0) {
+                        $("#Address").val(results[0].address_components[0].long_name + ' ' + results[0].address_components[1]['long_name']);
+                        $("#City").val(results[0].address_components[3].long_name);
+                        $("#ProvinceId").val(results[0].address_components[5].long_name);
+                        $("#Country").val(results[0].address_components[6].long_name);
+                        $("#PostalCode").val(results[0].address_components[7].long_name);
+                        $("#Long").val(results[0].geometry.location.lng);
+                        $("#Lat").val(results[0].geometry.location.lat);
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log("fail");
+                }
+            });
+        });
+
+        // update image
+        function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#image_upload_preview').attr('src', e.target.result);
+            }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        @*var er = '@imgSrc';
+        console.log(er);
+        if ('@imgSrc' !== "") {
+            $('#image_upload_preview').attr('src', `@imgSrc`);
+        }*@
+
+        $("#file").change(function () {
+                readURL(this);
+        });
+    });
+</script>

@@ -1,0 +1,302 @@
+2019-11-18 00:25:43 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 00:25:47 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-18 00:25:47 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-18 00:25:47 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 00:26:19 [INF] [null(::1)]: Directing to Account page for ThanhTran27 <>
+2019-11-18 00:26:20 [INF] [null(::1)]: Directing to Transaction page... <>
+2019-11-18 00:26:28 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 00:26:30 [INF] [null(::1)]: Directing to Forgot Password page... <>
+2019-11-18 00:26:31 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 00:26:33 [INF] [null(::1)]: Directing to Register Page <>
+2019-11-18 00:27:45 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 00:27:51 [INF] [null(::1)]: Directing to Register Page <>
+2019-11-18 00:27:58 [WRN] [null(::1)]: Invalid route access <>
+2019-11-18 00:27:58 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 00:28:20 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 00:28:48 [INF] [null(::1)]: Directing to Forgot Password page... <>
+2019-11-18 00:28:49 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 00:28:54 [INF] [null(::1)]: Directing to Forgot Password page... <>
+2019-11-18 00:33:07 [INF] [null(::1)]: Directing to Forgot Password page... <>
+2019-11-18 00:34:17 [INF] [null(::1)]: Directing to Forgot Password page... <>
+2019-11-18 00:34:36 [INF] [null(::1)]: Directing to Forgot Password page... <>
+2019-11-18 00:35:35 [INF] [null(::1)]: Directing to Forgot Password page... <>
+2019-11-18 00:35:43 [INF] [null(::1)]: Directing to Forgot Password page... <>
+2019-11-18 00:35:52 [INF] [null(::1)]: Directing to Forgot Password page... <>
+2019-11-18 00:36:37 [INF] [null(::1)]: Directing to Forgot Password page... <>
+2019-11-18 00:36:39 [INF] [null(::1)]: Directing to Forgot Password page... <>
+2019-11-18 00:36:49 [INF] [null(::1)]: Directing to Forgot Password page... <>
+2019-11-18 00:36:50 [INF] [null(::1)]: Directing to Forgot Password page... <>
+2019-11-18 00:37:05 [INF] [null(::1)]: Directing to Forgot Password page... <>
+2019-11-18 00:37:07 [WRN] [null(::1)]: Invalid route access <>
+2019-11-18 00:37:07 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 00:37:09 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-18 00:37:10 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-18 00:37:10 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 00:37:13 [INF] [null(::1)]: Directing to Account page for ThanhTran27 <>
+2019-11-18 00:37:14 [INF] [null(::1)]: Directing to Edit page... <>
+2019-11-18 00:37:59 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 00:39:45 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 00:41:54 [INF] [null(::1)]: Directing to Forgot Password page... <>
+2019-11-18 00:41:55 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 00:41:56 [INF] [null(::1)]: Directing to Forgot Password page... <>
+2019-11-18 00:41:58 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 00:41:59 [INF] [null(::1)]: Directing to Register Page <>
+2019-11-18 00:42:05 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 00:43:10 [INF] [null(::1)]: Directing to Forgot Password page... <>
+2019-11-18 00:50:34 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 00:50:37 [INF] [null(::1)]: Directing to Forgot Password page... <>
+2019-11-18 01:01:51 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 01:01:53 [INF] [null(::1)]: Directing to Forgot Password page... <>
+2019-11-18 01:02:05 [INF] [null(::1)]: Matching username with question and answer <>
+2019-11-18 01:02:19 [INF] [null(::1)]: Matching username with question and answer <>
+2019-11-18 01:02:35 [INF] [null(::1)]: Matching username with question and answer <>
+2019-11-18 01:05:57 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 01:06:00 [INF] [null(::1)]: Directing to Forgot Password page... <>
+2019-11-18 01:06:06 [INF] [null(::1)]: Matching username with question and answer <>
+2019-11-18 01:06:37 [INF] [null(::1)]: Matching username with question and answer <>
+2019-11-18 01:07:12 [INF] [null(::1)]: Matching username with question and answer <>
+2019-11-18 01:07:32 [INF] [null(::1)]: Matching username with question and answer <>
+2019-11-18 01:14:37 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 01:14:42 [INF] [null(::1)]: Directing to Forgot Password page... <>
+2019-11-18 01:14:47 [INF] [null(::1)]: Matching username with question and answer <>
+2019-11-18 01:17:24 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 01:17:30 [INF] [null(::1)]: Directing to Forgot Password page... <>
+2019-11-18 01:17:33 [INF] [null(::1)]: Matching username with question and answer <>
+2019-11-18 01:19:14 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 01:19:16 [INF] [null(::1)]: Directing to Forgot Password page... <>
+2019-11-18 01:19:20 [INF] [null(::1)]: Matching username with question and answer <>
+2019-11-18 01:21:26 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 01:21:32 [INF] [null(::1)]: Directing to Forgot Password page... <>
+2019-11-18 01:21:35 [INF] [null(::1)]: Matching username with question and answer <>
+2019-11-18 01:24:58 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 01:25:11 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 01:25:16 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-18 01:25:17 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-18 01:25:17 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 01:25:18 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 01:25:19 [INF] [null(::1)]: Directing to Forgot Password page... <>
+2019-11-18 01:25:22 [INF] [null(::1)]: Matching username with question and answer <>
+2019-11-18 01:25:56 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 01:26:00 [INF] [null(::1)]: Directing to Forgot Password page... <>
+2019-11-18 01:26:04 [INF] [null(::1)]: Matching username with question and answer <>
+2019-11-18 01:28:08 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 01:28:12 [INF] [null(::1)]: Directing to Forgot Password page... <>
+2019-11-18 01:28:21 [INF] [null(::1)]: Matching username with question and answer <>
+2019-11-18 01:31:08 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 01:31:12 [INF] [null(::1)]: Directing to Forgot Password page... <>
+2019-11-18 01:31:15 [INF] [null(::1)]: Matching username with question and answer <>
+2019-11-18 01:32:39 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 01:32:42 [INF] [null(::1)]: Directing to Forgot Password page... <>
+2019-11-18 01:32:46 [INF] [null(::1)]: Matching username with question and answer <>
+2019-11-18 01:33:46 [WRN] [null(::1)]: Invalid route access <>
+2019-11-18 01:33:46 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 01:36:47 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 01:36:51 [INF] [null(::1)]: Directing to Forgot Password page... <>
+2019-11-18 01:36:53 [INF] [null(::1)]: Matching username with question and answer <>
+2019-11-18 01:37:00 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-18 01:37:00 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-18 01:37:00 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 01:39:56 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 01:40:02 [INF] [null(::1)]: Directing to Forgot Password page... <>
+2019-11-18 01:40:06 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 01:40:07 [INF] [null(::1)]: Directing to Register Page <>
+2019-11-18 01:40:11 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 01:40:12 [WRN] [null(::1)]: Invalid route access <>
+2019-11-18 01:40:12 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 01:40:54 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-18 01:40:54 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-18 01:40:55 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 01:43:22 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 01:43:28 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-18 01:43:29 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-18 01:43:29 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 01:43:34 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-18 01:43:34 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-18 01:43:34 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 01:43:38 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-18 01:43:38 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-18 01:43:38 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 01:55:13 [INF] [null(::1)]: Directing to Account page for ThanhTran27 <>
+2019-11-18 01:55:15 [INF] [null(::1)]: Directing to Transaction page... <>
+2019-11-18 01:55:20 [INF] [null(::1)]: Directing to Inbox page... <>
+2019-11-18 01:55:21 [INF] [null(::1)]: Retrieve message with ID: 0 <>
+2019-11-18 01:55:58 [INF] [null(::1)]: Checking crentials for: JaneSmith23 <>
+2019-11-18 01:55:59 [INF] [null(::1)]: Credentials passed for: JaneSmith23 <>
+2019-11-18 01:55:59 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 01:56:00 [INF] [null(::1)]: Directing to Account page for JaneSmith23 <>
+2019-11-18 01:56:02 [INF] [null(::1)]: Directing to Payment page... <>
+2019-11-18 01:56:03 [INF] [null(::1)]: Directing to Account page for JaneSmith23 <>
+2019-11-18 01:56:07 [INF] [null(::1)]: Directing to Inbox page... <>
+2019-11-18 01:56:07 [INF] [null(::1)]: Retrieve message with ID: 0 <>
+2019-11-18 01:56:21 [INF] [null(::1)]: Directing to Inbox page... <>
+2019-11-18 01:57:12 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 01:57:16 [INF] [null(::1)]: Checking crentials for: JaneSmith23 <>
+2019-11-18 01:57:17 [INF] [null(::1)]: Credentials passed for: JaneSmith23 <>
+2019-11-18 01:57:17 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 01:57:19 [INF] [null(::1)]: Directing to Account page for JaneSmith23 <>
+2019-11-18 01:57:25 [INF] [null(::1)]: Directing to Inbox page... <>
+2019-11-18 01:57:29 [INF] [null(::1)]: Retrieve message with ID: 0 <>
+2019-11-18 01:58:42 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 01:58:54 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-18 01:58:54 [WRN] [null(::1)]: Credentials did not match DB <>
+2019-11-18 02:06:28 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-18 02:06:28 [WRN] [null(::1)]: Credentials did not match DB <>
+2019-11-18 02:06:32 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-18 02:06:32 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-18 02:06:32 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 02:15:24 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 02:15:48 [INF] [null(::1)]: Get Property schedule... <>
+2019-11-18 02:16:33 [INF] [null(::1)]: Directing to Account page for ThanhTran27 <>
+2019-11-18 02:16:34 [INF] [null(::1)]: Directing to Transaction page... <>
+2019-11-18 02:16:39 [INF] [null(::1)]: Directing to Account page for ThanhTran27 <>
+2019-11-18 02:16:40 [INF] [null(::1)]: Directing to Schedule page... <>
+2019-11-18 02:16:43 [INF] [null(::1)]: Directing to Account page for ThanhTran27 <>
+2019-11-18 02:16:44 [INF] [null(::1)]: Directing to Payment page... <>
+2019-11-18 02:16:46 [INF] [null(::1)]: Directing to Account page for ThanhTran27 <>
+2019-11-18 02:16:47 [INF] [null(::1)]: Directing to Edit page... <>
+2019-11-18 02:16:48 [INF] [null(::1)]: Directing to Account page for ThanhTran27 <>
+2019-11-18 02:16:54 [INF] [null(::1)]: Directing to Account page for ThanhTran27 <>
+2019-11-18 02:16:56 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 02:24:31 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 02:40:11 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 02:40:18 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-18 02:40:18 [WRN] [null(::1)]: Credentials did not match DB <>
+2019-11-18 02:40:21 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-18 02:40:21 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-18 02:40:21 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 02:41:34 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 02:41:41 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-18 02:41:41 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-18 02:41:41 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 02:43:42 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 02:44:20 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 03:01:52 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 03:01:55 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 03:02:02 [INF] [null(::1)]: Checking crentials for: Admin <>
+2019-11-18 03:02:03 [WRN] [null(::1)]: Credentials did not match DB <>
+2019-11-18 03:02:04 [INF] [null(::1)]: Checking crentials for: Admin <>
+2019-11-18 03:02:04 [INF] [null(::1)]: Credentials passed for: Admin <>
+2019-11-18 03:02:05 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 03:03:46 [INF] [null(::1)]: Directing to Account page for Admin <>
+2019-11-18 03:03:48 [INF] [null(::1)]: Directing to Account page for Admin <>
+2019-11-18 03:03:50 [INF] [null(::1)]: Directing to Account page for Admin <>
+2019-11-18 03:06:29 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 03:06:39 [INF] [null(::1)]: Checking crentials for: Admin <>
+2019-11-18 03:06:39 [INF] [null(::1)]: Credentials passed for: Admin <>
+2019-11-18 03:06:39 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 03:14:32 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 03:14:39 [INF] [null(::1)]: Checking crentials for: Admin <>
+2019-11-18 03:14:39 [INF] [null(::1)]: Credentials passed for: Admin <>
+2019-11-18 03:14:39 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 03:15:49 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 03:15:49 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 03:15:55 [INF] [null(::1)]: Checking crentials for: Admin <>
+2019-11-18 03:15:55 [INF] [null(::1)]: Credentials passed for: Admin <>
+2019-11-18 03:15:55 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 03:17:10 [INF] [null(::1)]: Directing to Inbox page... <>
+2019-11-18 03:17:10 [INF] [null(::1)]: Retrieve message with ID: 0 <>
+2019-11-18 03:19:54 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 03:19:59 [INF] [null(::1)]: Checking crentials for: Admin <>
+2019-11-18 03:19:59 [INF] [null(::1)]: Credentials passed for: Admin <>
+2019-11-18 03:19:59 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 03:20:26 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 03:20:35 [INF] [null(::1)]: Checking crentials for: Admin <>
+2019-11-18 03:20:35 [INF] [null(::1)]: Credentials passed for: Admin <>
+2019-11-18 03:20:35 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 03:25:35 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 03:29:18 [INF] [null(::1)]: Checking crentials for: Admin <>
+2019-11-18 03:29:18 [INF] [null(::1)]: Credentials passed for: Admin <>
+2019-11-18 03:29:18 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 03:32:13 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 03:32:49 [INF] [null(::1)]: Checking crentials for: Admin <>
+2019-11-18 03:32:49 [INF] [null(::1)]: Credentials passed for: Admin <>
+2019-11-18 03:32:49 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 03:34:51 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 03:35:03 [INF] [null(::1)]: Checking crentials for: Admin <>
+2019-11-18 03:35:03 [INF] [null(::1)]: Credentials passed for: Admin <>
+2019-11-18 03:35:03 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 11:33:55 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 11:37:07 [INF] [null(::1)]: Checking crentials for: Admin <>
+2019-11-18 11:37:07 [INF] [null(::1)]: Credentials passed for: Admin <>
+2019-11-18 11:37:07 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 11:39:45 [INF] [null(::1)]: Directing to Account page for Admin <>
+2019-11-18 11:39:47 [INF] [null(::1)]: Directing to Edit page... <>
+2019-11-18 11:40:12 [INF] [null(::1)]: Directing to Account page for Admin <>
+2019-11-18 11:40:15 [INF] [null(::1)]: Directing to Schedule page... <>
+2019-11-18 11:44:15 [INF] [null(::1)]: Directing to Schedule page... <>
+2019-11-18 11:46:14 [INF] [null(::1)]: Directing to Schedule page... <>
+2019-11-18 11:46:16 [INF] [null(::1)]: Directing to Schedule page... <>
+2019-11-18 11:46:25 [INF] [null(::1)]: Directing to Schedule page... <>
+2019-11-18 11:46:38 [INF] [null(::1)]: Directing to Schedule page... <>
+2019-11-18 11:46:39 [INF] [null(::1)]: Directing to Schedule page... <>
+2019-11-18 11:46:41 [INF] [null(::1)]: Directing to Schedule page... <>
+2019-11-18 11:46:46 [INF] [null(::1)]: Directing to Schedule page... <>
+2019-11-18 11:46:48 [INF] [null(::1)]: Directing to Schedule page... <>
+2019-11-18 11:49:09 [INF] [null(::1)]: Directing to Schedule page... <>
+2019-11-18 11:53:15 [INF] [null(::1)]: Directing to Schedule page... <>
+2019-11-18 11:53:38 [INF] [null(::1)]: Directing to Schedule page... <>
+2019-11-18 11:53:39 [INF] [null(::1)]: Directing to Schedule page... <>
+2019-11-18 11:53:43 [INF] [null(::1)]: Directing to Schedule page... <>
+2019-11-18 11:53:44 [INF] [null(::1)]: Directing to Schedule page... <>
+2019-11-18 11:54:53 [INF] [null(::1)]: Directing to Schedule page... <>
+2019-11-18 11:54:59 [INF] [null(::1)]: Directing to Schedule page... <>
+2019-11-18 11:55:12 [INF] [null(::1)]: Directing to Account page for Admin <>
+2019-11-18 11:55:15 [INF] [null(::1)]: Directing to Schedule page... <>
+2019-11-18 11:55:16 [INF] [null(::1)]: Directing to Account page for Admin <>
+2019-11-18 11:55:19 [INF] [null(::1)]: Property page to edit/add property <>
+2019-11-18 12:45:23 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 12:45:39 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-18 12:45:40 [WRN] [null(::1)]: Credentials did not match DB <>
+2019-11-18 12:45:45 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-18 12:45:45 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-18 12:45:45 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 12:45:47 [INF] [null(::1)]: Directing to Account page for ThanhTran27 <>
+2019-11-18 12:45:50 [INF] [null(::1)]: Directing to Account page for ThanhTran27 <>
+2019-11-18 12:45:55 [INF] [null(::1)]: Checking crentials for: Admin <>
+2019-11-18 12:45:55 [INF] [null(::1)]: Credentials passed for: Admin <>
+2019-11-18 12:45:55 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 12:54:27 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 12:54:32 [INF] [null(::1)]: Checking crentials for: Admin <>
+2019-11-18 12:54:32 [WRN] [null(::1)]: Credentials did not match DB <>
+2019-11-18 12:54:35 [INF] [null(::1)]: Checking crentials for: Admin <>
+2019-11-18 12:54:35 [INF] [null(::1)]: Credentials passed for: Admin <>
+2019-11-18 12:54:35 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 12:55:59 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 12:56:02 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-18 12:56:03 [WRN] [null(::1)]: Credentials did not match DB <>
+2019-11-18 12:56:06 [INF] [null(::1)]: Checking crentials for: Admin <>
+2019-11-18 12:56:06 [INF] [null(::1)]: Credentials passed for: Admin <>
+2019-11-18 12:56:06 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 12:56:17 [INF] [null(::1)]: Directing to Inbox page... <>
+2019-11-18 12:56:17 [INF] [null(::1)]: Retrieve message with ID: 0 <>
+2019-11-18 13:04:24 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 13:04:33 [INF] [null(::1)]: Checking crentials for: Admin <>
+2019-11-18 13:04:33 [INF] [null(::1)]: Credentials passed for: Admin <>
+2019-11-18 13:04:33 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 13:06:02 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 13:06:06 [INF] [null(::1)]: Checking crentials for: Admin <>
+2019-11-18 13:06:07 [INF] [null(::1)]: Credentials passed for: Admin <>
+2019-11-18 13:06:07 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 13:11:47 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 13:11:50 [INF] [null(::1)]: Directing to Account page for Admin <>
+2019-11-18 13:11:51 [INF] [null(::1)]: Property page to edit/add property <>
+2019-11-18 13:12:01 [INF] [null(::1)]: Property page to edit/add property <>
+2019-11-18 13:16:16 [INF] [null(::1)]: Property page to edit/add property <>
+2019-11-18 13:16:18 [INF] [null(::1)]: Property page to edit/add property <>
+2019-11-18 13:16:19 [INF] [null(::1)]: Property page to edit/add property <>
+2019-11-18 13:16:19 [INF] [null(::1)]: Property page to edit/add property <>
+2019-11-18 13:16:21 [INF] [null(::1)]: Property page to edit/add property <>
+2019-11-18 13:28:59 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 13:29:00 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 13:29:04 [INF] [null(::1)]: Checking crentials for: Admin <>
+2019-11-18 13:29:04 [INF] [null(::1)]: Credentials passed for: Admin <>
+2019-11-18 13:29:04 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 13:31:06 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 13:31:13 [INF] [null(::1)]: Checking crentials for: Admin <>
+2019-11-18 13:31:13 [INF] [null(::1)]: Credentials passed for: Admin <>
+2019-11-18 13:31:13 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 13:41:59 [INF] [null(::1)]: Directing to Account page for Admin <>
+2019-11-18 14:05:39 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 14:05:49 [INF] [null(::1)]: Checking crentials for: Admin <>
+2019-11-18 14:05:49 [INF] [null(::1)]: Credentials passed for: Admin <>
+2019-11-18 14:05:49 [INF] [null(::1)]: Create property object for map <>

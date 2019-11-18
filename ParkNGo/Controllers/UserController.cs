@@ -235,7 +235,7 @@ namespace ParkNGo.Controllers
             if (ViewData["Username"].ToString() != "")
             {
                 Log.Information("Directing to Inbox page...");
-                var messages = await _context.Messages.OrderByDescending(x => x.To.Equals(ViewData["Username"]) || x.From.Equals(ViewData["Username"])).ToListAsync();
+                var messages = await _context.Messages.Where(x => x.To.Equals(ViewData["Username"]) || x.From.Equals(ViewData["Username"])).OrderByDescending(x => x.Time).ToListAsync();
                 return View(messages);
             }
             else

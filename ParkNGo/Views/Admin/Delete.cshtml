@@ -1,0 +1,135 @@
+﻿@model ParkNGo.Models.User
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+    <div class="container-fluid">
+        <h2>Delete</h2>
+        <h3>Are you sure you want to delete this?</h3>
+        <div>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Password)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Password)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.FirstName)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.FirstName)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.LastName)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.LastName)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Gender)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Gender)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.BirthDate)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.BirthDate)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Address)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Address)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.City)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.City)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.ProvinceId)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.ProvinceId)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.PostalCode)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.PostalCode)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.SecretQuestion1)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.SecretQuestion1)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.SecretAnswer1)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.SecretAnswer1)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.SecretQuestion2)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.SecretQuestion2)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.SecretAnswer2)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.SecretAnswer2)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.DisplayUrl)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.DisplayUrl)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Role)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Role)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.PhoneNumber)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.PhoneNumber)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.PaymentId)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.PaymentId)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.PropertyId)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.PropertyId)
+                </dd>
+            </dl>
+
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="Username" />
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                <a asp-action="Users">Back to List</a>
+            </form>
+        </div>
+    </div>

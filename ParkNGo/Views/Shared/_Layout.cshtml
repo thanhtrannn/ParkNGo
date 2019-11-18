@@ -255,7 +255,11 @@
 
     var getDropdown = function () {
         var user = "@ViewData["Username"]";
-
+        var role = "@ViewData["Role"]";
+        // append admin page to shortcut
+        if (role === "Admin") {
+            $("#username-dropdown").append("<li><a href='/Admin'>Admin</a></li>")
+        }
         if (user != "") {
             if ($("#my-account").length == 0) {
                 $("#username-dropdown").append("<li id='my-account'><a href='/Home/Account'>My Account</a></li>")

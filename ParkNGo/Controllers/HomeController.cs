@@ -7,6 +7,7 @@ using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -91,6 +92,13 @@ namespace ParkNGo.Controllers
                 return RedirectToAction("Index");
             }
         }
+
+        public List<Parking> GetParking()
+        {
+            var parkings = _context.Parking.ToList();
+
+            return parkings;
+        }
         /// <summary>
         /// Register page when "Register" link is clicked, calls RegistrationViewComponent for new registrations
         /// </summary>
@@ -108,31 +116,50 @@ namespace ParkNGo.Controllers
         /// <returns>Login page for successful registration, else registration page for unsuccessful registration</returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Register(User user, UserProperty userProperty)
-        {
-            Log.Information("Registering user...");
-            // run if modal is valid using data annotation built in model
-            if (ModelState.IsValid)
+        public async Task<IActionResult> Register(User user, UserProperty userProperty, IFormFile file, Payment payment)
+    {
+        Log.Information("Registering user...");
+        // run if modal is valid using data annotation built in model
+
+            try
             {
-                try
+                // set role to User, admin can only be added through SQL
+                user.Role = "User";
+                _context.Add(user);
+                await _context.SaveChangesAsync();
+                if( payment.Number != null)
                 {
-                    // set role to User, admin can only be added through SQL
-                    user.Role = "User";
-                    _context.Add(user);
+                    _context.Add(payment);
                     await _context.SaveChangesAsync();
-                    if ( userProperty != null)
-                    {
-                        _context.Add(userProperty);
-                        await _context.SaveChangesAsync();
-                    }
-                    return RedirectToAction(nameof(Index));
                 }
-                catch (Exception ex)
+                if ( userProperty.PropAddress != null)
                 {
-                    Log.ForContext<HomeController>().Error(ex, "Problem with registration for {0}", user.Username);
+                    if (file != null)
+                    {
+                        Log.Information("Convert image to format for DB");
+                        using (var ms = new MemoryStream())
+                        {
+                            file.CopyTo(ms);
+                            userProperty.ImageUrl = ms.ToArray();
+                        }
+
+                    }
+                    _context.Add(userProperty);
+                    await _context.SaveChangesAsync();
                 }
+                user.PropertyId = userProperty.PropertyId;
+                user.PaymentId = payment.PaymentId;
+                _context.Update(user);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+
+
             }
-            Log.Warning("Incorrect field inputs for {0}, returng back to Register", user.Username);
+            catch (Exception ex)
+            {
+                Log.ForContext<HomeController>().Error(ex, "Problem with registration for {0}", user.Username);
+            }
+            
             return View(user);
         }
         /// <summary>
@@ -162,6 +189,69 @@ namespace ParkNGo.Controllers
         {
             Log.Information("Directing to Forgot Password page...");
             return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        /// <summary>
+        /// Direct app to forget password form
+        /// </summary>
+        /// <returns>Forget password page</returns>
+        public IActionResult Forgot(string question, string username, string answer)
+        {
+            Log.Information("Matching username with question and answer");
+            if (!username.Equals(""))
+            {
+               var user = _context.User.FirstOrDefault(x => x.Username.Equals(username));
+               if ( user != null)
+                {
+                    if (user.SecretQuestion1.Equals(question) && user.SecretAnswer1.Equals(answer))
+                    {
+                        TempData["ForgotPassword"] = user.Username;
+                        return RedirectToAction("ChangePassword");
+                    }
+                    else if (user.SecretQuestion2.Equals(question) && user.SecretAnswer2.Equals(answer))
+                    {
+                        TempData["ForgotPassword"] = user.Username;
+                        return RedirectToAction("ChangePassword");
+                    }
+                    else
+                    {
+                        TempData["Error"] = "No matching question and answer with username, please try again!";
+                    }
+                }
+                else
+                {
+                    TempData["Error"] = "No matching question and answer with username, please try again!";
+                }
+            }
+            return View();
+        }
+        /// <summary>
+        /// Password change page, username set if successfuly secret question and answer matches
+        /// </summary>
+        /// <returns>Change Password Page</returns>
+        public IActionResult ChangePassword()
+        {
+            var user = new User();
+            user.Username = TempData["ForgotPassword"].ToString();
+            return View(user);
+        }
+        /// <summary>
+        /// POST - Validation done through javascript - no validation check in c#
+        /// </summary>
+        /// <param name="tempUser">Retrieve username set in temp data</param>
+        /// <param name="p1">Password</param>
+        /// <returns>Redirect to Index with success message</returns>
+        [HttpPost]
+        public IActionResult ChangePassword(User tempUser, string p1)
+        {
+            var user = _context.User.FirstOrDefault(x => x.Username.Equals(tempUser.Username));
+            user.Password = p1;
+            _context.Update(user);
+            _context.SaveChangesAsync();
+            TempData["Success"] = "Password successfully change!";
+            return View("Index");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
@@ -209,6 +299,25 @@ namespace ParkNGo.Controllers
                 Log.ForContext<HomeController>().Error(ex, "Problem with saving user comment to db");
                 return NotFound("Error with saviing");
             }
+        }
+
+        public bool CheckUsername ( string username)
+        {
+            var checkUser = _context.User.FirstOrDefault(x => x.Username.Equals(username));
+            if (checkUser == null)
+            {
+                return false;
+            }
+            else
+                return true;
+        }
+
+        public IActionResult Logout()
+        {
+            ViewData["Role"] = "";
+            ViewData["Username"] = "";
+            HttpContext.Session.Clear();
+            return View("Index");
         }
     }
 }

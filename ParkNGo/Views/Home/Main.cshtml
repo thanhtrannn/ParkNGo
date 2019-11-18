@@ -72,12 +72,12 @@
         map = new google.maps.Map(document.getElementById('map'), mySettings);
 
     };
- 
+
     function onPlaceChanged() {
         var place = autocomplete.getPlace();
         var radius = parseInt($("#set-range").val());
         var zoom = 15;
-        
+
         if (radius > 1000 && radius <= 2000) {
             zoom = 14;
         } else if (radius > 2000 && radius <= 5000) {
@@ -161,29 +161,42 @@
                 title: property.propAddress,
                 id: property.propertyId
             });
-                    // add lister for markers
-        marker.addListener("click", function () {
-            var thisId = this.id;
-            $.ajax({
-                type: 'get',
-                datatype: 'html',
-                url: 'getViewComponent',
-                data: { 'view': 'infoWindow', 'component': 'Main', 'username': this.id },
-                complete: function (data, textstatus, jqxhr) {
-                    $("#filter-section").hide();
-                    $("#detail-section").show();
-                    $("#detail-section").html(data.responseText);
-                    getReviews(thisId);
+            // add lister for markers
+            marker.addListener("click", function () {
+                var thisId = this.id;
+                $.ajax({
+                    type: 'get',
+                    datatype: 'html',
+                    url: 'getViewComponent',
+                    data: { 'view': 'infoWindow', 'component': 'Main', 'username': this.id },
+                    complete: function (data, textstatus, jqxhr) {
+                        $("#filter-section").hide();
+                        $("#detail-section").show();
+                        $("#detail-section").html(data.responseText);
+                        getReviews(thisId);
 
-                },
-                error: function (jqxhr, textstatus, errorthrown) {
-                    console.log("fail");
-                }
+                    },
+                    error: function (jqxhr, textstatus, errorthrown) {
+                        console.log("fail");
+                    }
+                });
             });
         });
-        })
 
-
+        // get other properties
+        var listOfOtherProperty;
+        $.ajax({
+            type: 'get',
+            datatype: 'html',
+            url: 'GetParking',
+            complete: function (data, textstatus, jqxhr) {
+                listOfOtherProperty = JSON.parse(data.responseText);
+                console.log(listOfOtherProperty);
+            },
+            error: function (jqxhr, textstatus, errorthrown) {
+                console.log("fail");
+            }
+        });
 
     });
 </script>

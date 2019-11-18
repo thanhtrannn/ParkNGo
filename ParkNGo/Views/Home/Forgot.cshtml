@@ -3,5 +3,36 @@
     ViewData["Title"] = "Forgot";
 }
 
-<h2>Forgot</h2>
+    <div class="container-fluid">
+        <h2>Password Recovery</h2>
+        <hr />
+        @if (TempData["Success"] != null)
+        {
+            <div class="alert alert-success" role="alert">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                <span class="sr-only">Success:</span>
+                @TempData["Success"]
+            </div>
+        }
+        @if (TempData["Error"] != null)
+        {
+            <div class="alert alert-danger" role="alert">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                <span class="sr-only">Error:</span>
+                @TempData["Error"]
+            </div>
+
+        }
+        <form method="post">
+            <label class="control-label">Username</label>
+            <input name="username" class="form-control" />
+            <label class="control-label">Question</label>
+            <input name="question" class="form-control" />
+            <label class="control-label">Answer</label>
+            <input name="answer" class="form-control" />
+            <br />
+            <input type="submit" class="btn btn-primary" value="Submit" />
+            <a href="/Home/Index" class="btn btn-danger">Back</a>
+        </form>
+    </div>
 

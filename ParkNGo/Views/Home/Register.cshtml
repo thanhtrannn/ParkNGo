@@ -4,7 +4,7 @@
 }
 
 <div class="container-fluid">
-    <form method="post" id="registration-section">
+    <form method="post" enctype="multipart/form-data" id="registration-section">
         @if (Model != null)
         {
             @await Component.InvokeAsync("Registration", new { username = Model.Username })

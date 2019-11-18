@@ -1,0 +1,143 @@
+2019-11-17 00:14:33 [INF] [null(::1)]: Directing to Register Page <>
+2019-11-17 00:22:28 [INF] [null(::1)]: Registering user... <>
+2019-11-17 00:22:28 [WRN] [null(::1)]: Incorrect field inputs for Thanh-tran@hotmail.com , returng back to Register <>
+2019-11-17 00:22:44 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-17 00:22:49 [INF] [null(::1)]: Directing to Register Page <>
+2019-11-17 00:23:15 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-17 00:23:29 [INF] [null(::1)]: Directing to Register Page <>
+2019-11-17 00:25:30 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-17 00:25:42 [INF] [null(::1)]: Directing to Register Page <>
+2019-11-17 00:28:44 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-17 00:28:52 [INF] [null(::1)]: Directing to Register Page <>
+2019-11-17 00:29:49 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-17 00:30:12 [INF] [null(::1)]: Directing to Register Page <>
+2019-11-17 00:30:51 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-17 00:30:58 [INF] [null(::1)]: Directing to Register Page <>
+2019-11-17 00:37:54 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-17 00:38:00 [INF] [null(::1)]: Directing to Register Page <>
+2019-11-17 00:40:02 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-17 00:41:47 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-17 00:41:50 [INF] [null(::1)]: Directing to Register Page <>
+2019-11-17 00:46:35 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-17 00:46:40 [INF] [null(::1)]: Directing to Register Page <>
+2019-11-17 00:48:07 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-17 00:48:11 [INF] [null(::1)]: Directing to Register Page <>
+2019-11-17 00:52:05 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-17 00:52:32 [INF] [null(::1)]: Directing to Register Page <>
+2019-11-17 00:59:01 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-17 01:05:46 [INF] [null(::1)]: Directing to Register Page <>
+2019-11-17 01:07:29 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-17 01:09:03 [INF] [null(::1)]: Directing to Register Page <>
+2019-11-17 01:12:30 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-17 01:13:24 [INF] [null(::1)]: Directing to Register Page <>
+2019-11-17 01:56:12 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-17 01:56:16 [INF] [null(::1)]: Directing to Register Page <>
+2019-11-17 02:01:58 [INF] [null(::1)]: Directing to Register Page <>
+2019-11-17 02:03:41 [INF] [null(::1)]: Directing to Register Page <>
+2019-11-17 02:09:50 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-17 02:09:54 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-17 02:09:54 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-17 02:09:54 [INF] [null(::1)]: Create property object for map <>
+2019-11-17 02:10:01 [INF] [null(::1)]: Directing to Account page for ThanhTran27 <>
+2019-11-17 02:10:04 [INF] [null(::1)]: Directing to Edit page... <>
+2019-11-17 02:10:05 [INF] [null(::1)]: Create property object for map <>
+2019-11-17 02:10:09 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-17 02:10:10 [INF] [null(::1)]: Directing to Register Page <>
+2019-11-17 02:12:11 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-17 02:12:13 [INF] [null(::1)]: Directing to Register Page <>
+2019-11-17 02:16:19 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-17 02:16:55 [INF] [null(::1)]: Directing to Register Page <>
+2019-11-17 02:23:23 [INF] [null(::1)]: Registering user... <>
+2019-11-17 02:25:23 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-17 02:25:26 [INF] [null(::1)]: Directing to Register Page <>
+2019-11-17 02:28:01 [INF] [null(::1)]: Registering user... <>
+2019-11-17 02:29:48 [ERR] [null(::1)]: Problem with registration for JaneSmith23 <ParkNGo.Controllers.HomeController>
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: String or binary data would be truncated.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at ParkNGo.Controllers.HomeController.Register(User user, UserProperty userProperty, IFormFile file, Payment payment) in H:\Capstone\ParkNGo\ParkNGo\Controllers\HomeController.cs:line 126
+2019-11-17 02:29:55 [WRN] [null(::1)]: Invalid route access <>
+2019-11-17 02:29:55 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-17 02:29:58 [INF] [null(::1)]: Checking crentials for: JaneSmith23 <>
+2019-11-17 02:29:58 [INF] [null(::1)]: Credentials passed for: JaneSmith23 <>
+2019-11-17 02:29:58 [INF] [null(::1)]: Create property object for map <>
+2019-11-17 02:30:00 [INF] [null(::1)]: Directing to Account page for JaneSmith23 <>
+2019-11-17 02:30:02 [INF] [null(::1)]: Directing to Edit page... <>
+2019-11-17 02:30:04 [INF] [null(::1)]: Directing to Account page for JaneSmith23 <>
+2019-11-17 02:30:09 [INF] [null(::1)]: Property page to edit/add property <>
+2019-11-17 02:30:10 [INF] [null(::1)]: Directing to Account page for JaneSmith23 <>
+2019-11-17 02:30:13 [INF] [null(::1)]: Directing to Payment page... <>
+2019-11-17 02:30:49 [INF] [null(::1)]: Adding payment information <>
+2019-11-17 02:32:39 [ERR] [null(::1)]: Error to adding/updating payment information <ParkNGo.Controllers.UserController>
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: String or binary data would be truncated.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at ParkNGo.Controllers.UserController.Payment(Payment payment) in H:\Capstone\ParkNGo\ParkNGo\Controllers\UserController.cs:line 211
+2019-11-17 02:32:39 [INF] [null(::1)]: Directing to Account page for JaneSmith23 <>
+2019-11-17 02:32:42 [INF] [null(::1)]: Directing to Payment page... <>
+2019-11-17 02:33:07 [INF] [null(::1)]: Adding payment information <>
+2019-11-17 02:33:10 [INF] [null(::1)]: Retrieving new/updated payment id and updating user db <>
+2019-11-17 02:33:15 [INF] [null(::1)]: Success to adding/updating payment information <>
+2019-11-17 02:33:16 [INF] [null(::1)]: Directing to Account page for JaneSmith23 <>
+2019-11-17 02:33:21 [INF] [null(::1)]: Property page to edit/add property <>
+2019-11-17 02:33:25 [INF] [null(::1)]: Directing to Payment page... <>
+2019-11-17 02:33:27 [INF] [null(::1)]: Directing to Account page for JaneSmith23 <>
+2019-11-17 02:33:29 [INF] [null(::1)]: Directing to Payment page... <>
+2019-11-17 02:33:30 [INF] [null(::1)]: Directing to Account page for JaneSmith23 <>
+2019-11-17 02:33:34 [INF] [null(::1)]: Directing to Edit page... <>
+2019-11-17 02:33:35 [INF] [null(::1)]: Directing to Account page for JaneSmith23 <>
+2019-11-17 02:33:43 [INF] [null(::1)]: Directing to Edit page... <>
+2019-11-17 02:33:50 [INF] [null(::1)]: Directing to Account page for JaneSmith23 <>
+2019-11-17 02:33:51 [INF] [null(::1)]: Property page to edit/add property <>
+2019-11-17 02:34:01 [INF] [null(::1)]: Directing to Edit page... <>
+2019-11-17 02:34:05 [INF] [null(::1)]: Directing to Payment page... <>
+2019-11-17 02:34:08 [INF] [null(::1)]: Directing to Inbox page... <>
+2019-11-17 02:34:08 [INF] [null(::1)]: Retrieve message with ID: 0 <>
+2019-11-17 02:34:09 [INF] [null(::1)]: Directing to Transaction page... <>
+2019-11-17 02:34:12 [INF] [null(::1)]: Directing to Inbox page... <>
+2019-11-17 02:34:12 [INF] [null(::1)]: Retrieve message with ID: 0 <>
+2019-11-17 02:34:53 [INF] [null(::1)]: Directing to Inbox page... <>
+2019-11-17 02:36:47 [INF] [null(::1)]: Retrieve message with ID: 0 <>
+2019-11-17 02:36:54 [INF] [null(::1)]: Retrieve message with ID: 4 <>
+2019-11-17 02:36:56 [INF] [null(::1)]: Retrieve message with ID: 5 <>
+2019-11-17 02:36:58 [INF] [null(::1)]: Retrieve message with ID: 5 <>
+2019-11-17 02:36:59 [INF] [null(::1)]: Retrieve message with ID: 5 <>
+2019-11-17 02:37:00 [INF] [null(::1)]: Retrieve message with ID: 6 <>
+2019-11-17 02:37:07 [INF] [null(::1)]: Create property object for map <>
+2019-11-17 02:37:18 [INF] [null(::1)]: Directing to Account page for JaneSmith23 <>
+2019-11-17 02:37:20 [INF] [null(::1)]: Property page to edit/add property <>
+2019-11-17 02:38:09 [INF] [null(::1)]: Convert image to format for DB <>
+2019-11-17 02:38:09 [INF] [null(::1)]: Adding property <>
+2019-11-17 02:38:09 [INF] [null(::1)]: Updating added property value to user db <>
+2019-11-17 02:38:09 [INF] [null(::1)]: Success to adding/updating property information <>
+2019-11-17 02:38:09 [INF] [null(::1)]: Directing to Account page for JaneSmith23 <>
+2019-11-17 02:38:11 [INF] [null(::1)]: Property page to edit/add property <>
+2019-11-17 02:38:33 [INF] [null(::1)]: Create property object for map <>

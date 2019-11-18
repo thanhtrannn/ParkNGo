@@ -1,0 +1,85 @@
+﻿@model ParkNGo.Models.User
+
+@{
+    ViewData["Title"] = "Admin Page";
+}
+
+<style>
+    #account-selection {
+        list-style: none;
+        line-height: 5;
+    }
+
+    .left-user-info {
+        background: #222;
+        height: 88vh;
+        color: white;
+        padding: 30px 0px;
+        text-align: center;
+        background-color: #152238;
+    }
+
+    .list-user-info {
+        padding: 0;
+        list-style: none;
+    }
+
+    .user-image {
+        max-width: 175px;
+        margin: 0px auto;
+    }
+
+    .main-section {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        margin-top: 6vh;
+    }
+</style>
+<div class=".main-section">
+    <div class="left-user-info col-sm-3">
+        <div>
+            <img src="~/images/user-image.png" class="img-responsive user-image img-circle" asp-append-version="true" />
+        </div>
+        <br />
+        <ul class="list-user-info">
+            <li>@Model.FirstName @Model.LastName</li>
+            <li>@Model.Address</li>
+            <li>@Model.City ,@Model.ProvinceId</li>
+            <li>@Model.PostalCode</li>
+            <li>@Model.Email</li>
+            <li>@Model.PhoneNumber</li>
+        </ul>
+    </div>
+    <div class="col-sm-9">
+        <h2>@ViewData["Title"]</h2>
+        <hr />
+        @if (TempData["Success"] != null)
+        {
+            <div class="alert alert-success" role="alert">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                <span class="sr-only">Success:</span>
+                @TempData["Success"]
+            </div>
+        }
+        @if (TempData["Error"] != null)
+        {
+            <div class="alert alert-danger" role="alert">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                <span class="sr-only">Error:</span>
+                @TempData["Error"]
+            </div>
+
+        }
+        <ul id="account-selection">
+            <li><a href="@Url.Action("Users", "Admin")">Edit Users</a></li>
+            <li><a href="@Url.Action("Parking", "Admin")">Parking</a></li>
+            <li><a href="@Url.Action("Inbox", "User")">Inbox</a></li>
+        </ul>
+    </div>
+</div>
+
+<script>
+
+</script>

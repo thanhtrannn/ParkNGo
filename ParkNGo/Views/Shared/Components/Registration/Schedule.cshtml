@@ -1,4 +1,13 @@
-﻿
+﻿@model ParkNGo.Models.UserProperty
+<link href="~/css/jquery-ui.css" rel="stylesheet" />
+<script src="~/js/jquery-ui.js"></script>
+<link rel="stylesheet" href="~/css/jquery.schedule.css">
+<script src="~/js/jquery.schedule.js"></script>
+<style>
+    #schedule-section {
+        height: 60vh;
+    }
+</style>
 @{
     ViewData["Title"] = "Schedule";
 }
@@ -6,33 +15,23 @@
 <div id="registration-schedule" class="form-group">
     <h2>Schedule</h2>
     <hr />
+    <span><strong>Note: </strong>Please set schedule by blocks then click on blocks to add price</span>
+    <div id="schedule-section"></div>
     <br />
-    <input type="button" class="btn btn-primary" id="new-sched-btn" value="Add New">
-    <br />
-    <div id="schedule-section">
-    </div>
+    @Html.HiddenFor(x => x.AvailabilityId)
     <br />
     <input type="button" class="btn btn-primary" id="add-sched-btn" value="Add Schedule">
     <input type="button" class="btn btn-danger" id="skip-sched-btn" value="Skip">
 </div>
 
 <script>
+    var setDateAndTime = function () {
+        var data = $('#schedule-section').jqs('export');
+        $("#AvailabilityId").val(data);
+    };
     $(document).ready(function () {
-        $("#new-sched-btn").click(function () {
-            $.ajax({
-                type: 'GET',
-                dataType: 'json',
-                url: 'GetViewComponent',
-                data: { 'view': 'DateAndTimes' },
-                complete: function (data, textStatus, jqXHR) {
-                    $("#schedule-section").append(data.responseText);
-                },
-                error: function (jqXHR, textStatus, errorThrown) {
-                    console.log("fail");
-                }
-            })
-        });
         $("#add-sched-btn").click(function () {
+            setDateAndTime();
             $("#registration-schedule").hide();
             $.ajax({
                 type: 'GET',
@@ -63,6 +62,21 @@
                     console.log("fail");
                 }
             })
+        });
+        $("#schedule-section").jqs({
+            mode: 'edit',
+            periodBackgroundColor: "rgba(205, 234, 212, 0.8)",
+            daysList: [
+                'Mon',
+                'Tues',
+                'Wed',
+                'Thur',
+                'Fri',
+                'Sat',
+                'Sun'
+            ],
+            periodTitlePlaceholder: 'Set price in CAD'
+
         });
     });
 

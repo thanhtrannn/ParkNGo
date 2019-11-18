@@ -106,23 +106,22 @@ namespace ParkNGo.Models
                     .IsUnicode(false);
 
                 entity.Property(e => e.Address)
-                    .IsRequired()
                     .HasColumnName("address")
                     .HasMaxLength(150)
                     .IsUnicode(false);
 
-                entity.Property(e => e.AvailabilityId).HasColumnName("availability_id");
-
                 entity.Property(e => e.City)
-                    .IsRequired()
                     .HasColumnName("city")
                     .HasMaxLength(100)
                     .IsUnicode(false);
 
                 entity.Property(e => e.CommentsId).HasColumnName("comments_id");
 
+                entity.Property(e => e.Cost)
+                    .HasColumnName("cost")
+                    .HasColumnType("money");
+
                 entity.Property(e => e.Country)
-                    .IsRequired()
                     .HasColumnName("country")
                     .HasMaxLength(50)
                     .IsUnicode(false);
@@ -130,6 +129,10 @@ namespace ParkNGo.Models
                 entity.Property(e => e.Description)
                     .HasColumnName("description")
                     .IsUnicode(false);
+
+                entity.Property(e => e.HoursFrom).HasColumnName("hours_from");
+
+                entity.Property(e => e.HoursTo).HasColumnName("hours_to");
 
                 entity.Property(e => e.Image)
                     .HasColumnName("image")
@@ -154,15 +157,18 @@ namespace ParkNGo.Models
                 entity.Property(e => e.LongTo).HasColumnName("long_to");
 
                 entity.Property(e => e.PostalCode)
-                    .IsRequired()
                     .HasColumnName("postal_code")
                     .HasMaxLength(10)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Province)
-                    .IsRequired()
                     .HasColumnName("province")
                     .HasMaxLength(10)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Rate)
+                    .HasColumnName("rate")
+                    .HasMaxLength(50)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Rating).HasColumnName("rating");

@@ -1,0 +1,59 @@
+﻿@model IEnumerable<ParkNGo.Models.Parking>
+<style>
+    #admin-table tr{
+        cursor: pointer;
+    }
+</style>
+<link href="~/css/dataTables.bootstrap.css" rel="stylesheet" />
+<script src="~/js/datatables.js"></script>
+<div class="container-fluid">
+    <h2>Manage Parking</h2>
+    <hr />
+    <a role="button" class="btn btn-primary" asp-action="Add">Create New</a>
+    <br />
+    <br />
+    <table class="table display table-hover table-striped" id="admin-table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ParkingId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Type)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Address)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr id="@item.ParkingId">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ParkingId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Type)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Address)
+                    </td>
+                    <td>
+                        <a asp-action="Delete" asp-route-id="@item.ParkingId">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<script>
+    $(document).ready(function () {
+        var table = $("#admin-table").DataTable();
+        $("#admin-table tr").on("click", function () {
+            console.log(this.id)
+            window.location.href = "/Admin/ParkingEdit/" + this.id
+        });
+    });
+</script>
