@@ -20,6 +20,7 @@ namespace ParkNGo.ViewComponents
         public async Task<IViewComponentResult> InvokeAsync(string view, string username)
         {
             var user =  _context.User.FirstOrDefault(x => x.Username == username);  
+
             if ( view == null )
             {
                 view = "Default";

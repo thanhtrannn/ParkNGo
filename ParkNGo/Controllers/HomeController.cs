@@ -151,9 +151,8 @@ namespace ParkNGo.Controllers
                 user.PaymentId = payment.PaymentId;
                 _context.Update(user);
                 await _context.SaveChangesAsync();
+                TempData["Success"] = "Account successfully created!";
                 return RedirectToAction(nameof(Index));
-
-
             }
             catch (Exception ex)
             {
@@ -272,11 +271,11 @@ namespace ParkNGo.Controllers
             {
                 Log.Information("Saving comment to DB...");
                 // build comment object and save to db
-                var Comment = new CommentRating() { Username = ViewData["Username"].ToString(), Id = id, Comment = comment, Rating = Int32.Parse(rating) };
+                var Comment = new CommentRating() { Username = ViewData["Username"].ToString(), Id = id, Comment = comment, Rating = Int32.Parse(rating) , Date=DateTime.Now};
                 _context.Add(Comment);
                 await _context.SaveChangesAsync();
                 // update property rating
-                var propertyComment = _context.CommentRating.Where(x => x.Id == id).ToList();
+                var propertyComment =  _context.CommentRating.Where(x => x.Id == id).ToList();
                 // check rating for all comment left for property
                 int totalRating = 0;
                 var ratingAmount = 0;
@@ -285,13 +284,14 @@ namespace ParkNGo.Controllers
                     totalRating += (int)prop.Rating;
                     ratingAmount++;
                 }
+                
                 // average
                 float averageRating = totalRating / ratingAmount;
-                var context = new ParkNGoContext();
-                var property = context.UserProperty.FirstOrDefault(x => x.PropertyId == id);
+                Log.Information("Average rating is " + averageRating);
+                var property = _context.UserProperty.FirstOrDefault(x => x.PropertyId == id);
                 property.Rating = averageRating;
-                context.Update(property);
-                await context.SaveChangesAsync();
+                _context.Update(property);
+                await _context.SaveChangesAsync();
                 return Ok("Review successfully saved!");
             }
             catch(Exception ex)

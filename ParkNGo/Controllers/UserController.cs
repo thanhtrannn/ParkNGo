@@ -325,11 +325,10 @@ namespace ParkNGo.Controllers
             try
             {
                 Log.Information("Saving schedule to Property DB");
-                var context = new ParkNGoContext();
-                var property = await context.UserProperty.FirstOrDefaultAsync(x => x.PropertyId == id);
+                var property = await _context.UserProperty.FirstOrDefaultAsync(x => x.PropertyId == id);
                 property.AvailabilityId = scheduleJson;
-                context.Update(property);
-                await context.SaveChangesAsync();
+                _context.Update(property);
+                await _context.SaveChangesAsync();
                 Log.Information("Successful update to property DB with schedule");
                 return Ok("Schedule update successful!");
             }
@@ -427,11 +426,10 @@ namespace ParkNGo.Controllers
                     property.AvailabilityId = book.ToString();
                     _context.Update(property);
                     await _context.SaveChangesAsync();
-                    var context = new ParkNGoContext();
-                    var tran = context.Transaction.FirstOrDefault(x => x.TransactionId == transaction.TransactionId);
+                    var tran = _context.Transaction.FirstOrDefault(x => x.TransactionId == transaction.TransactionId);
                     tran.Status = "Booked";
-                    context.Update(tran);
-                    await context.SaveChangesAsync();
+                    _context.Update(tran);
+                    await _context.SaveChangesAsync();
                     Log.Information("Property availability updated and booked");
                 }
                 else

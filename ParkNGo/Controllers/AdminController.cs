@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ParkNGo.Middleware;
 using ParkNGo.Models;
 using ParkNGo.Tools;
+using Serilog;
 
 namespace ParkNGo.Controllers
 {
@@ -142,14 +145,58 @@ namespace ParkNGo.Controllers
             var parkings = _context.Parking.ToList();
             return View(parkings);
         }
-        public async Task<IActionResult> Add()
+        public async Task<IActionResult> Add(int id)
         {
-            return View();
+            if (id == 0)
+            {
+                return View();
+            }
+            else
+            {
+                var parking = _context.Parking.FirstOrDefault(x => x.ParkingId == id);
+                return View(parking);
+            }
         }
         [HttpPost]
-        public async Task<IActionResult> Add(Parking parking)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Add(Parking parking, IFormFile file)
         {
-            return View();
+            try
+            {
+                // convert image to be stored in DB
+                if (file != null)
+                {
+                    Log.Information("Convert image to format for DB");
+                    using (var ms = new MemoryStream())
+                    {
+                        file.CopyTo(ms);
+                        parking.Image = ms.ToArray();
+                    }
+
+                }
+                if (parking.ParkingId > 0)
+                {
+                    Log.Information("Updating parking");
+                    _context.Update(parking);
+                    await _context.SaveChangesAsync();
+                }
+                else
+                {
+                    Log.Information("Adding parking");
+                    _context.Add(parking);
+                    await _context.SaveChangesAsync();
+                }
+
+                Log.Information("Successfully added parking");
+                TempData["Success"] = "Success";
+                return RedirectToAction("Parking");
+            }
+            catch (Exception ex)
+            {
+                Log.ForContext<AdminController>().Error(ex, "Error in adding parking");
+                TempData["Error"] = "Error with server, please contact customer support";
+                return View(parking);
+            }
         }
         public async Task<IActionResult> ParkingEdit(string id)
         {

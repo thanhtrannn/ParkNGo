@@ -300,3 +300,72 @@
 2019-11-18 14:05:49 [INF] [null(::1)]: Checking crentials for: Admin <>
 2019-11-18 14:05:49 [INF] [null(::1)]: Credentials passed for: Admin <>
 2019-11-18 14:05:49 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 14:19:26 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 14:37:23 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 14:37:30 [INF] [null(::1)]: Checking crentials for: Admin <>
+2019-11-18 14:37:31 [INF] [null(::1)]: Credentials passed for: Admin <>
+2019-11-18 14:37:31 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 14:37:51 [INF] [null(::1)]: Convert image to format for DB <>
+2019-11-18 14:37:51 [INF] [null(::1)]: Adding property <>
+2019-11-18 14:37:51 [INF] [null(::1)]: Successfully added parking <>
+2019-11-18 14:38:50 [INF] [null(::1)]: Convert image to format for DB <>
+2019-11-18 14:38:55 [INF] [null(::1)]: Adding property <>
+2019-11-18 14:38:58 [INF] [null(::1)]: Successfully added parking <>
+2019-11-18 14:47:04 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 14:47:53 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 14:47:54 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 14:48:00 [INF] [null(::1)]: Checking crentials for: Admin <>
+2019-11-18 14:48:00 [INF] [null(::1)]: Credentials passed for: Admin <>
+2019-11-18 14:48:00 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 14:51:53 [INF] [null(::1)]: Convert image to format for DB <>
+2019-11-18 14:51:53 [INF] [null(::1)]: Adding property <>
+2019-11-18 14:51:53 [INF] [null(::1)]: Successfully added parking <>
+2019-11-18 14:55:19 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 14:55:24 [INF] [null(::1)]: Checking crentials for: Admin <>
+2019-11-18 14:55:24 [INF] [null(::1)]: Credentials passed for: Admin <>
+2019-11-18 14:55:24 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 14:56:44 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 14:57:03 [INF] [null(::1)]: Checking crentials for: Admin <>
+2019-11-18 14:57:03 [INF] [null(::1)]: Credentials passed for: Admin <>
+2019-11-18 14:57:04 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 14:58:29 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 14:58:33 [INF] [null(::1)]: Checking crentials for: Admin <>
+2019-11-18 14:58:33 [INF] [null(::1)]: Credentials passed for: Admin <>
+2019-11-18 14:58:34 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 14:59:56 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 15:00:00 [INF] [null(::1)]: Checking crentials for: Admin <>
+2019-11-18 15:00:00 [INF] [null(::1)]: Credentials passed for: Admin <>
+2019-11-18 15:00:00 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 15:00:37 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 15:03:40 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 15:03:58 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 15:12:16 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 15:21:28 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 15:21:36 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-18 15:21:37 [WRN] [null(::1)]: Credentials did not match DB <>
+2019-11-18 15:21:39 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-18 15:21:39 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-18 15:21:39 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 15:23:10 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 15:23:14 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-18 15:23:14 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-18 15:23:14 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 15:24:36 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-18 15:24:40 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-18 15:24:41 [WRN] [null(::1)]: Credentials did not match DB <>
+2019-11-18 15:24:43 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-18 15:24:43 [INF] [null(::1)]: Credentials passed for: ThanhTran27 <>
+2019-11-18 15:24:43 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 15:24:51 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 15:27:34 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 15:28:48 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 15:30:43 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 15:30:56 [INF] [null(::1)]: Create property object for map <>
+2019-11-18 15:36:18 [INF] [null(::1)]: Directing to Account page for ThanhTran27 <>
+2019-11-18 15:36:20 [INF] [null(::1)]: Property page to edit/add property <>
+2019-11-18 15:36:22 [INF] [null(::1)]: Directing to Account page for ThanhTran27 <>
+2019-11-18 15:36:23 [INF] [null(::1)]: Directing to Edit page... <>
+2019-11-18 15:36:26 [INF] [null(::1)]: Directing to Account page for ThanhTran27 <>
+2019-11-18 15:36:27 [INF] [null(::1)]: Directing to Payment page... <>
+2019-11-18 15:36:29 [INF] [null(::1)]: Directing to Account page for ThanhTran27 <>
+2019-11-18 15:36:31 [INF] [null(::1)]: Create property object for map <>

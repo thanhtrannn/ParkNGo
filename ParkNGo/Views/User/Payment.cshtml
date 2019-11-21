@@ -43,8 +43,8 @@
             var img_src = "";
             switch (this.value) {
                 case "": img_src = ""; break;
-                case "Visa": img_src = "/images/visa.png"; break;
-                case "Mastercard": img_src = "/images/mastercard.png"; break;
+                case "Visa": img_src = window.location.origin + "/images/visa.png"; break;
+                case "Mastercard": img_src = window.location.origin + "/images/mastercard.png"; break;
                 default: break;
             }
             $("#creditCard").attr("src", img_src);

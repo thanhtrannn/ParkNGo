@@ -1,0 +1,35 @@
+2019-11-19 21:40:23 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-19 21:40:28 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-19 21:40:29 [WRN] [null(::1)]: Credentials did not match DB <>
+2019-11-19 21:40:30 [INF] [null(::1)]: Directing to Register Page <>
+2019-11-19 21:42:42 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-19 21:43:18 [INF] [null(::1)]: Directing to Register Page <>
+2019-11-19 21:51:07 [INF] [null(::1)]: Registering user... <>
+2019-11-19 21:51:16 [INF] [null(::1)]: Convert image to format for DB <>
+2019-11-19 21:51:24 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-19 21:51:27 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-19 21:51:28 [WRN] [null(::1)]: Credentials did not match DB <>
+2019-11-19 21:51:30 [INF] [null(::1)]: Checking crentials for: ThanhTran27 <>
+2019-11-19 21:51:30 [WRN] [null(::1)]: Credentials did not match DB <>
+2019-11-19 21:52:02 [INF] [null(::1)]: Checking crentials for: ThanhTran <>
+2019-11-19 21:52:02 [INF] [null(::1)]: Credentials passed for: ThanhTran <>
+2019-11-19 21:52:02 [INF] [null(::1)]: Create property object for map <>
+2019-11-19 22:34:27 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-19 22:41:58 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-19 22:42:09 [INF] [null(::1)]: Directing to Register Page <>
+2019-11-19 22:42:13 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-19 22:42:53 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-19 23:17:14 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-19 23:17:27 [INF] [null(::1)]: Checking crentials for: FirstUser <>
+2019-11-19 23:17:28 [INF] [null(::1)]: Credentials passed for: FirstUser <>
+2019-11-19 23:17:28 [INF] [null(::1)]: Create property object for map <>
+2019-11-19 23:21:59 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-19 23:22:01 [INF] [null(::1)]: Directing to Register Page <>
+2019-11-19 23:22:04 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-19 23:22:05 [INF] [null(::1)]: Directing to Forgot Password page... <>
+2019-11-19 23:22:06 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-19 23:26:40 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-19 23:32:23 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-19 23:33:07 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-19 23:34:21 [INF] [null(::1)]: Retrieving Index page... <>
+2019-11-19 23:35:02 [INF] [null(::1)]: Retrieving Index page... <>

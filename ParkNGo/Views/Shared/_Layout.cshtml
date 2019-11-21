@@ -10,7 +10,6 @@
         width: 100%;
         margin: 0;
         padding: 0;
-        margin-top: 6vh;
     }
 
     .remove-padding {
@@ -174,7 +173,7 @@
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
 </head>
 
@@ -273,7 +272,7 @@
     $(document).ready(function () {
         getDropdown();
         // on window resize, have nav bar unfix it self when view on phone
-        $(window).resize(function () {
+/*        $(window).resize(function () {
             if ($(window).width() < 768) {
                 var navbarHeight = $(".navbar")[0].clientHeight;
                 $(".main-section").css("margin-top", navbarHeight + "px");
@@ -283,6 +282,6 @@
                 $(".left-user-info").css("height", "");
             }
         });
-
+*/
     });
 </script>

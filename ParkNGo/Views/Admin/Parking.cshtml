@@ -9,7 +9,7 @@
 <div class="container-fluid">
     <h2>Manage Parking</h2>
     <hr />
-    <a role="button" class="btn btn-primary" asp-action="Add">Create New</a>
+    <a role="button" class="btn btn-primary" asp-action="Add"asp-route-id="0" >Create New</a>
     <br />
     <br />
     <table class="table display table-hover table-striped" id="admin-table">
@@ -24,7 +24,6 @@
                 <th>
                     @Html.DisplayNameFor(model => model.Address)
                 </th>
-                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -39,10 +38,7 @@
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Address)
-                    </td>
-                    <td>
-                        <a asp-action="Delete" asp-route-id="@item.ParkingId">Delete</a>
-                    </td>
+                    </td>                
                 </tr>
             }
         </tbody>
@@ -53,7 +49,7 @@
         var table = $("#admin-table").DataTable();
         $("#admin-table tr").on("click", function () {
             console.log(this.id)
-            window.location.href = "/Admin/ParkingEdit/" + this.id
+            window.location.href = "/Admin/Add/" + this.id
         });
     });
 </script>

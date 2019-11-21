@@ -13,7 +13,6 @@
         width: 100%;
         margin: 0;
         padding: 0;
-        margin-top: 6vh;
     }
 
     #main-overlay {
@@ -159,7 +158,8 @@
                 position: { lat: property.lat, lng: property.long },
                 map: map,
                 title: property.propAddress,
-                id: property.propertyId
+                id: property.propertyId,
+                icon: 'http://maps.google.com/mapfiles/kml/pal2/icon10.png'
             });
             // add lister for markers
             marker.addListener("click", function () {
@@ -184,19 +184,28 @@
         });
 
         // get other properties
-        var listOfOtherProperty;
+        var listOfParking;
         $.ajax({
             type: 'get',
             datatype: 'html',
             url: 'GetParking',
             complete: function (data, textstatus, jqxhr) {
-                listOfOtherProperty = JSON.parse(data.responseText);
-                console.log(listOfOtherProperty);
+                listOfParking = JSON.parse(data.responseText);
+                listOfParking.forEach(function (parking) {
+                    marker = new google.maps.Marker({
+                        position: { lat: parking.lat, lng: parking.long },
+                        map: map,
+                        title: parking.address,
+                        id: parking.parkingId,
+                        icon: 'http://maps.google.com/mapfiles/kml/pal3/icon21.png'
+                    });
+                });
             },
             error: function (jqxhr, textstatus, errorthrown) {
                 console.log("fail");
             }
         });
+
 
     });
 </script>
