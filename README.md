@@ -20,7 +20,7 @@ Replicate instance of database by running backup (.bak) file or by replicating m
 * **Development:** Visual Studio IIS Express
 * **Staging:** Contained deployment to IIS with Core .NET 2.1 Hosting Bundle (Capable of cross platform deployment)
 
-Set environment variables such as connection string through appsettings.**{Development/Staging}**.json
+Set environment variables such as connection string through appsettings.**{Development/Staging}**.json. Set prefer method of logging that Serilog has to offer and include your key for Google Maps API.
 
 
 ## Testing
